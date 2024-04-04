@@ -1,0 +1,9 @@
+#' @docType package
+#' @name conquer2-package
+#' @title Conquer2: Convolution-Type Smoothed Quantile Regression without an intercept
+#' @description Modification of conquer package to solve the models with no intercept. Estimation and inference for conditional linear quantile regression models using a convolution smoothed approach.
+#' In the low-dimensional setting, efficient gradient-based methods are employed for fitting both a single model and a regression process over a quantile range. Normal-based and (multiplier) bootstrap confidence intervals for all slope coefficients are constructed.
+#' In high dimensions, the conquer methods complemented with \eqn{\ell_1}-penalization and iteratively reweighted \eqn{\ell_1}-penalization are used to fit sparse models.
+#' Commonly used penalities, such as the elastic-net, group lasso and sparse group lasso, are also incorporated to deal with more complex low-dimensional structures.
+#' @author Alvaro Mendez-Civieta <am5490@cumc.columbia.edu>
+NULL
