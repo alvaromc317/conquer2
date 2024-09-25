@@ -1,2 +1,6 @@
-^conquer2\.Rproj$
+^.*\.Rproj$
 ^\.Rproj\.user$
+^conquer2\.Rproj$
+^LICENSE\.md$
+^README\.Rmd$
+^\.github$

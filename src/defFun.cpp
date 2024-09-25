@@ -17,7 +17,7 @@ double mad(const arma::vec& x) {
 // [[Rcpp::export]]
 arma::mat standardize(arma::mat X, const arma::rowvec& mx, const arma::vec& sx1, const int p) {
   for (int i = 0; i < p; i++) {
-    X.col(i) = (X.col(i) - mx(i)) * sx1(i);
+    X.col(i) = (X.col(i)) * sx1(i);
   }
   return X;
 }
@@ -40,7 +40,6 @@ void lossQr(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, const
 // [[Rcpp::export]]
 arma::vec cmptLambdaLasso(const double lambda, const int p) {
   arma::vec rst = lambda * arma::ones(p);
-  rst(0) = 0;
   return rst;
 }
 
@@ -115,7 +114,7 @@ arma::vec lasso(const arma::mat& Z, const arma::vec& Y, const double lambda, con
 // [[Rcpp::export]]
 arma::vec cmptLambdaSCAD(const arma::vec& beta, const double lambda, const int p, const double para) {
   arma::vec rst = arma::zeros(p);
-  for (int i = 1; i <= p; i++) {
+  for (int i = 0; i < p; i++) {
     double abBeta = std::abs(beta(i));
     if (abBeta <= lambda) {
       rst(i) = lambda;
@@ -129,7 +128,7 @@ arma::vec cmptLambdaSCAD(const arma::vec& beta, const double lambda, const int p
 // [[Rcpp::export]]
 arma::vec cmptLambdaMCP(const arma::vec& beta, const double lambda, const int p, const double para) {
   arma::vec rst = arma::zeros(p);
-  for (int i = 1; i <= p; i++) {
+  for (int i = 0; i < p; i++) {
     double abBeta = std::abs(beta(i));
     if (abBeta <= para * lambda) {
       rst(i) = lambda - abBeta / para;

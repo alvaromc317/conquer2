@@ -11,7 +11,7 @@ conquer.reg(
   tau = 0.5,
   kernel = c("Gaussian", "logistic", "uniform", "parabolic", "triangular"),
   h = 0,
-  penalty = c("lasso", "elastic"),
+  penalty = c("lasso", "elastic", "group", "sparse-group", "scad", "mcp"),
   para.elastic = 0.5,
   group = NULL,
   weights = NULL,
@@ -37,7 +37,7 @@ conquer.reg(
 
 \item{h}{(\strong{optional}) Bandwidth/smoothing parameter. Default is \eqn{\max\{0.5 * (log(p) / n)^{0.25}, 0.05\}}. The default will be used if the input value is less than or equal to 0.}
 
-\item{penalty}{(\strong{optional}) A character string specifying the penalty. Default is "lasso" (Tibshirani, 1996). The other options are "elastic" for elastic-net (Zou and Hastie, 2005).}
+\item{penalty}{(\strong{optional}) A character string specifying the penalty. Default is "lasso" (Tibshirani, 1996). The other options are "elastic" for elastic-net (Zou and Hastie, 2005), "group" for group lasso (Yuan and Lin, 2006), "sparse-group" for sparse group lasso (Simon et al., 2013), "scad" (Fan and Li, 2001) and "mcp" (Zhang, 2010).}
 
 \item{para.elastic}{(\strong{optional}) The mixing parameter between 0 and 1 (usually noted as \eqn{\alpha}) for elastic-net. The penalty is defined as \eqn{\alpha ||\beta||_1 + (1 - \alpha) ||\beta||_2^2}. Default is 0.5.
 Setting \code{para.elastic = 1} gives the lasso penalty, and setting \code{para.elastic = 0} yields the ridge penalty. Only specify it when \code{penalty = "elastic"}.}
@@ -93,6 +93,17 @@ beta.lasso = fit.lasso$coeff
 fit.elastic = conquer.reg(X, Y, lambda = 0.1, tau = 0.7, penalty = "elastic", para.elastic = 0.7)
 beta.elastic = fit.elastic$coeff
 
+## Regularized conquer with scad penalty at tau = 0.7
+fit.scad = conquer.reg(X, Y, lambda = 0.13, tau = 0.7, penalty = "scad")
+beta.scad = fit.scad$coeff
+
+## Regularized conquer with group lasso at tau = 0.7
+beta = c(rep(1.3, 5), rep(1.5, 5), rep(0, p - s))
+err = rt(n, 2)
+Y = X \%*\% beta + err
+group = c(rep(1, 5), rep(2, 5), rep(3, p - s))
+fit.group = conquer.reg(X, Y, lambda = 0.05, tau = 0.7, penalty = "group", group = group)
+beta.group = fit.group$coeff
 }
 \references{
 Belloni, A. and Chernozhukov, V. (2011). \eqn{\ell_1} penalized quantile regression in high-dimensional sparse models. Ann. Statist., 39, 82-130.
@@ -114,4 +125,7 @@ Yuan, M. and Lin, Y. (2006). Model selection and estimation in regression with g
 Zhang, C.-H. (2010). Nearly unbiased variable selection under minimax concave penalty. Ann. Statist., 38, 894-942.
 
 Zou, H. and Hastie, T. (2005). Regularization and variable selection via the elastic net. J. R. Statist. Soc. Ser. B, 67, 301-320.
+}
+\seealso{
+See \code{\link{conquer.cv.reg}} for regularized quantile regression with cross-validation.
 }
