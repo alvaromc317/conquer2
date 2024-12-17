@@ -1,4 +1,4 @@
-#' @useDynLib conquer2
+#' @useDynLib conquer2adaptive
 #' @importFrom Rcpp evalCpp
 #' @importFrom matrixStats rowSds rowQuantiles rowMaxs colSds
 #' @importFrom stats qnorm quantile runif

@@ -1,7 +1,7 @@
 #' _PACKAGE
-#' @name conquer2-package
-#' @title Conquer2: Convolution-Type Smoothed Quantile Regression
-#' @description conquer2 is merely an edited fork of the package conquer. The package conquer is a wonderfully fast package for solving quantile regression models that enforces the existence of an intercept. This fork of the package merely removes the intercept and solves no-intercept models. For any references or information regarding how the package works we refer you to the original conquer package.
+#' @name conquer2adaptive-package
+#' @title conquer2adaptive: Convolution-Type Smoothed Quantile Regression
+#' @description conquer2adaptive is merely an edited fork of the package conquer. The package conquer is a wonderfully fast package for solving quantile regression models that enforces the existence of an intercept. This fork of the package merely removes the intercept and solves no-intercept models. For any references or information regarding how the package works we refer you to the original conquer package.
 #' @author Alvaro Mendez-Civieta <am5490@cuimc.columbia.edu>
 #' @references Barzilai, J. and Borwein, J. M. (1988). Two-point step size gradient methods. IMA J. Numer. Anal., 8, 141–148.
 #' @references Belloni, A. and Chernozhukov, V. (2011). \eqn{\ell_1} penalized quantile regression in high-dimensional sparse models. Ann. Statist., 39, 82-130.

@@ -16,22 +16,22 @@ library(tidyverse)
 
 ```
 
-# conquer2
+# conquer2adaptive
 
 <!-- badges: start -->
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Package Version](https://img.shields.io/badge/version-0.0.1-blue.svg)](https://cran.r-project.org/package=yourPackageName)
 <!-- badges: end -->
 
-conquer2 is an edited fork of the package `conquer`. The package `conquer` is a wonderfully fast package for solving quantile regression models that enforces the existence of an intercept. This fork of the package merely removes the intercept and solves no-intercept models. For any references or information regarding how the package works we refer you to the original [repository](https://github.com/XiaoouPan/conquer) and [manual](https://cran.r-project.org/web/packages/conquer/conquer.pdf)
+conquer2adaptive is an edited fork of the package `conquer`. The package `conquer` is a wonderfully fast package for solving quantile regression models that enforces the existence of an intercept. This fork of the package merely removes the intercept and solves no-intercept models. For any references or information regarding how the package works we refer you to the original [repository](https://github.com/XiaoouPan/conquer) and [manual](https://cran.r-project.org/web/packages/conquer/conquer.pdf)
 
 ## Installation
 
-You can install the development version of conquer2 from [GitHub](https://github.com/) with:
+You can install the development version of conquer2adaptive from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("alvaromc317/conquer2")
+devtools::install_github("alvaromc317/conquer2adaptive")
 ```
 
 ## Example 1: unpenalized comparison
@@ -52,7 +52,7 @@ y = X %*% beta + eps
 ```
 
 ```{r}
-library(conquer2)
+library(conquer2adaptive)
 model = conquer(X, y, tau=0.5)
 ```
 
@@ -83,7 +83,7 @@ coefficients_matrix <- matrix(0, nrow = length(lambda_values), ncol = ncol(X))
 
 for (i in seq_along(lambda_values))
 {
-  model <- conquer2::conquer.reg(X, y, penalty = 'lasso', lambda = lambda_values[i], tau = 0.5)
+  model <- conquer2adaptive::conquer.reg(X, y, penalty = 'lasso', lambda = lambda_values[i], tau = 0.5)
   coefficients_matrix[i, ] <- model$coeff
 }
 
@@ -105,6 +105,6 @@ matplot(
 ## Example 3: Group lasso penalty
 
 ```{r}
-model <- conquer2::conquer.reg(X, y, penalty = 'group', group=1:10, lambda = 0.01, tau = 0.5)
+model <- conquer2adaptive::conquer.reg(X, y, penalty = 'group', group=1:10, lambda = 0.01, tau = 0.5)
 model$coeff
 ```

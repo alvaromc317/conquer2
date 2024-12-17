@@ -1,6 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^conquer2\.Rproj$
+^conquer2adaptive\.Rproj$
 ^LICENSE\.md$
 ^README\.Rmd$
 ^\.github$
