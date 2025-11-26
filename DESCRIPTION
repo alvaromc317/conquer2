@@ -1,4 +1,4 @@
-Package: conquer2adaptive
+Package: conquer2
 Title: Convolution-Type Smoothed Quantile Regression without intercept
 Version: 0.0.1
 Authors@R: 

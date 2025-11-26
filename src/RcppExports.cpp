@@ -13,7 +13,7 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 
 // sgn
 int sgn(const double x);
-RcppExport SEXP _conquer2adaptive_sgn(SEXP xSEXP) {
+RcppExport SEXP _conquer2_sgn(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -24,7 +24,7 @@ END_RCPP
 }
 // mad
 double mad(const arma::vec& x);
-RcppExport SEXP _conquer2adaptive_mad(SEXP xSEXP) {
+RcppExport SEXP _conquer2_mad(SEXP xSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -35,7 +35,7 @@ END_RCPP
 }
 // standardize
 arma::mat standardize(arma::mat X, const arma::rowvec& mx, const arma::vec& sx1, const int p);
-RcppExport SEXP _conquer2adaptive_standardize(SEXP XSEXP, SEXP mxSEXP, SEXP sx1SEXP, SEXP pSEXP) {
+RcppExport SEXP _conquer2_standardize(SEXP XSEXP, SEXP mxSEXP, SEXP sx1SEXP, SEXP pSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -49,7 +49,7 @@ END_RCPP
 }
 // softThresh
 arma::vec softThresh(const arma::vec& x, const arma::vec& Lambda, const int p);
-RcppExport SEXP _conquer2adaptive_softThresh(SEXP xSEXP, SEXP LambdaSEXP, SEXP pSEXP) {
+RcppExport SEXP _conquer2_softThresh(SEXP xSEXP, SEXP LambdaSEXP, SEXP pSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -62,7 +62,7 @@ END_RCPP
 }
 // lossQr
 void lossQr(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, const double tau, const int i, arma::vec& dev, arma::vec& devsq);
-RcppExport SEXP _conquer2adaptive_lossQr(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP iSEXP, SEXP devSEXP, SEXP devsqSEXP) {
+RcppExport SEXP _conquer2_lossQr(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP iSEXP, SEXP devSEXP, SEXP devsqSEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const arma::mat& >::type Z(ZSEXP);
@@ -78,7 +78,7 @@ END_RCPP
 }
 // cmptLambdaLasso
 arma::vec cmptLambdaLasso(const double lambda, const int p);
-RcppExport SEXP _conquer2adaptive_cmptLambdaLasso(SEXP lambdaSEXP, SEXP pSEXP) {
+RcppExport SEXP _conquer2_cmptLambdaLasso(SEXP lambdaSEXP, SEXP pSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -90,7 +90,7 @@ END_RCPP
 }
 // lossL2
 double lossL2(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, const double n1, const double tau);
-RcppExport SEXP _conquer2adaptive_lossL2(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP n1SEXP, SEXP tauSEXP) {
+RcppExport SEXP _conquer2_lossL2(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP n1SEXP, SEXP tauSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -105,7 +105,7 @@ END_RCPP
 }
 // updateL2
 double updateL2(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, arma::vec& grad, const double n1, const double tau);
-RcppExport SEXP _conquer2adaptive_updateL2(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP gradSEXP, SEXP n1SEXP, SEXP tauSEXP) {
+RcppExport SEXP _conquer2_updateL2(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP gradSEXP, SEXP n1SEXP, SEXP tauSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -121,7 +121,7 @@ END_RCPP
 }
 // lammL2
 double lammL2(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, arma::vec& beta, const double tau, const double phi, const double gamma, const int p, const double n1);
-RcppExport SEXP _conquer2adaptive_lammL2(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP n1SEXP) {
+RcppExport SEXP _conquer2_lammL2(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP n1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -140,7 +140,7 @@ END_RCPP
 }
 // lasso
 arma::vec lasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_lasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_lasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -160,7 +160,7 @@ END_RCPP
 }
 // cmptLambdaSCAD
 arma::vec cmptLambdaSCAD(const arma::vec& beta, const double lambda, const int p, const double para);
-RcppExport SEXP _conquer2adaptive_cmptLambdaSCAD(SEXP betaSEXP, SEXP lambdaSEXP, SEXP pSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_cmptLambdaSCAD(SEXP betaSEXP, SEXP lambdaSEXP, SEXP pSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -174,7 +174,7 @@ END_RCPP
 }
 // cmptLambdaMCP
 arma::vec cmptLambdaMCP(const arma::vec& beta, const double lambda, const int p, const double para);
-RcppExport SEXP _conquer2adaptive_cmptLambdaMCP(SEXP betaSEXP, SEXP lambdaSEXP, SEXP pSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_cmptLambdaMCP(SEXP betaSEXP, SEXP lambdaSEXP, SEXP pSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -188,7 +188,7 @@ END_RCPP
 }
 // lossGaussHd
 double lossGaussHd(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, const double tau, const double h, const double h1, const double h2);
-RcppExport SEXP _conquer2adaptive_lossGaussHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP) {
+RcppExport SEXP _conquer2_lossGaussHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -205,7 +205,7 @@ END_RCPP
 }
 // updateGaussHd
 double updateGaussHd(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, arma::vec& grad, const double tau, const double n1, const double h, const double h1, const double h2);
-RcppExport SEXP _conquer2adaptive_updateGaussHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP) {
+RcppExport SEXP _conquer2_updateGaussHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -224,7 +224,7 @@ END_RCPP
 }
 // lammGaussLasso
 double lammGaussLasso(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, arma::vec& beta, const double tau, const double phi, const double gamma, const int p, const double h, const double n1, const double h1, const double h2);
-RcppExport SEXP _conquer2adaptive_lammGaussLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
+RcppExport SEXP _conquer2_lammGaussLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -246,7 +246,7 @@ END_RCPP
 }
 // lammGaussElastic
 double lammGaussElastic(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, arma::vec& beta, const double tau, const double alpha, const double phi, const double gamma, const int p, const double h, const double n1, const double h1, const double h2);
-RcppExport SEXP _conquer2adaptive_lammGaussElastic(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
+RcppExport SEXP _conquer2_lammGaussElastic(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -269,7 +269,7 @@ END_RCPP
 }
 // lammGaussGroupLasso
 double lammGaussGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, arma::vec& beta, const double tau, const arma::vec& group, const arma::vec& weight, const double phi, const double gamma, const int p, const int G, const double h, const double n1, const double h1, const double h2);
-RcppExport SEXP _conquer2adaptive_lammGaussGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
+RcppExport SEXP _conquer2_lammGaussGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -294,7 +294,7 @@ END_RCPP
 }
 // lammGaussSparseGroupLasso
 double lammGaussSparseGroupLasso(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, const double lambda, arma::vec& beta, const double tau, const arma::vec& group, const arma::vec& weight, const double phi, const double gamma, const int p, const int G, const double h, const double n1, const double h1, const double h2);
-RcppExport SEXP _conquer2adaptive_lammGaussSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
+RcppExport SEXP _conquer2_lammGaussSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -320,7 +320,7 @@ END_RCPP
 }
 // gaussLasso
 arma::vec gaussLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_gaussLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_gaussLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -343,7 +343,7 @@ END_RCPP
 }
 // gaussLassoWarm
 arma::vec gaussLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_gaussLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_gaussLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -367,7 +367,7 @@ END_RCPP
 }
 // gaussElastic
 arma::vec gaussElastic(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const double alpha, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_gaussElastic(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_gaussElastic(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -391,7 +391,7 @@ END_RCPP
 }
 // gaussElasticWarm
 arma::vec gaussElasticWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const double alpha, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_gaussElasticWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_gaussElasticWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -416,7 +416,7 @@ END_RCPP
 }
 // gaussGroupLasso
 arma::vec gaussGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_gaussGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_gaussGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -442,7 +442,7 @@ END_RCPP
 }
 // gaussGroupLassoWarm
 arma::vec gaussGroupLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_gaussGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_gaussGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -469,7 +469,7 @@ END_RCPP
 }
 // gaussSparseGroupLasso
 arma::vec gaussSparseGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_gaussSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_gaussSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -495,7 +495,7 @@ END_RCPP
 }
 // gaussSparseGroupLassoWarm
 arma::vec gaussSparseGroupLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_gaussSparseGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_gaussSparseGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -522,7 +522,7 @@ END_RCPP
 }
 // gaussScad
 arma::vec gaussScad(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_gaussScad(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_gaussScad(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -547,7 +547,7 @@ END_RCPP
 }
 // gaussScadWarm
 arma::vec gaussScadWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax, const double para);
-RcppExport SEXP _conquer2adaptive_gaussScadWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_gaussScadWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -572,7 +572,7 @@ END_RCPP
 }
 // gaussMcp
 arma::vec gaussMcp(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_gaussMcp(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_gaussMcp(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -597,7 +597,7 @@ END_RCPP
 }
 // gaussMcpWarm
 arma::vec gaussMcpWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax, const double para);
-RcppExport SEXP _conquer2adaptive_gaussMcpWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_gaussMcpWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -622,7 +622,7 @@ END_RCPP
 }
 // conquerGaussLasso
 arma::vec conquerGaussLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerGaussLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerGaussLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -641,7 +641,7 @@ END_RCPP
 }
 // conquerGaussLassoSeq
 arma::mat conquerGaussLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerGaussLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerGaussLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -660,7 +660,7 @@ END_RCPP
 }
 // conquerGaussElastic
 arma::vec conquerGaussElastic(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double alpha, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerGaussElastic(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerGaussElastic(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -680,7 +680,7 @@ END_RCPP
 }
 // conquerGaussElasticSeq
 arma::mat conquerGaussElasticSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double alpha, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerGaussElasticSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerGaussElasticSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -700,7 +700,7 @@ END_RCPP
 }
 // conquerGaussGroupLasso
 arma::vec conquerGaussGroupLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerGaussGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerGaussGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -722,7 +722,7 @@ END_RCPP
 }
 // conquerGaussGroupLassoSeq
 arma::mat conquerGaussGroupLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerGaussGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerGaussGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -744,7 +744,7 @@ END_RCPP
 }
 // conquerGaussSparseGroupLasso
 arma::vec conquerGaussSparseGroupLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerGaussSparseGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerGaussSparseGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -766,7 +766,7 @@ END_RCPP
 }
 // conquerGaussSparseGroupLassoSeq
 arma::mat conquerGaussSparseGroupLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerGaussSparseGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerGaussSparseGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -788,7 +788,7 @@ END_RCPP
 }
 // conquerGaussScad
 arma::vec conquerGaussScad(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerGaussScad(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerGaussScad(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -809,7 +809,7 @@ END_RCPP
 }
 // conquerGaussScadSeq
 arma::mat conquerGaussScadSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerGaussScadSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerGaussScadSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -830,7 +830,7 @@ END_RCPP
 }
 // conquerGaussMcp
 arma::vec conquerGaussMcp(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerGaussMcp(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerGaussMcp(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -851,7 +851,7 @@ END_RCPP
 }
 // conquerGaussMcpSeq
 arma::mat conquerGaussMcpSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerGaussMcpSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerGaussMcpSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -872,7 +872,7 @@ END_RCPP
 }
 // cvGaussLassoWarm
 Rcpp::List cvGaussLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvGaussLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvGaussLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -893,7 +893,7 @@ END_RCPP
 }
 // cvGaussElasticWarm
 Rcpp::List cvGaussElasticWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const double alpha, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvGaussElasticWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvGaussElasticWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -915,7 +915,7 @@ END_RCPP
 }
 // cvGaussGroupLassoWarm
 Rcpp::List cvGaussGroupLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvGaussGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvGaussGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -939,7 +939,7 @@ END_RCPP
 }
 // cvGaussSparseGroupLassoWarm
 Rcpp::List cvGaussSparseGroupLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvGaussSparseGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvGaussSparseGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -963,7 +963,7 @@ END_RCPP
 }
 // cvGaussScadWarm
 Rcpp::List cvGaussScadWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_cvGaussScadWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_cvGaussScadWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -986,7 +986,7 @@ END_RCPP
 }
 // cvGaussMcpWarm
 Rcpp::List cvGaussMcpWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_cvGaussMcpWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_cvGaussMcpWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1009,7 +1009,7 @@ END_RCPP
 }
 // lossLogisticHd
 double lossLogisticHd(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, const double tau, const double h, const double h1);
-RcppExport SEXP _conquer2adaptive_lossLogisticHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_lossLogisticHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1025,7 +1025,7 @@ END_RCPP
 }
 // updateLogisticHd
 double updateLogisticHd(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, arma::vec& grad, const double tau, const double n1, const double h, const double h1);
-RcppExport SEXP _conquer2adaptive_updateLogisticHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_updateLogisticHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1043,7 +1043,7 @@ END_RCPP
 }
 // lammLogisticLasso
 double lammLogisticLasso(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, arma::vec& beta, const double tau, const double phi, const double gamma, const int p, const double h, const double n1, const double h1);
-RcppExport SEXP _conquer2adaptive_lammLogisticLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_lammLogisticLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1064,7 +1064,7 @@ END_RCPP
 }
 // lammLogisticElastic
 double lammLogisticElastic(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, arma::vec& beta, const double tau, const double alpha, const double phi, const double gamma, const int p, const double h, const double n1, const double h1);
-RcppExport SEXP _conquer2adaptive_lammLogisticElastic(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_lammLogisticElastic(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1086,7 +1086,7 @@ END_RCPP
 }
 // lammLogisticGroupLasso
 double lammLogisticGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, arma::vec& beta, const double tau, const arma::vec& group, const arma::vec& weight, const double phi, const double gamma, const int p, const int G, const double h, const double n1, const double h1);
-RcppExport SEXP _conquer2adaptive_lammLogisticGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_lammLogisticGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1110,7 +1110,7 @@ END_RCPP
 }
 // lammLogisticSparseGroupLasso
 double lammLogisticSparseGroupLasso(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, const double lambda, arma::vec& beta, const double tau, const arma::vec& group, const arma::vec& weight, const double phi, const double gamma, const int p, const int G, const double h, const double n1, const double h1);
-RcppExport SEXP _conquer2adaptive_lammLogisticSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_lammLogisticSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1135,7 +1135,7 @@ END_RCPP
 }
 // logisticLasso
 arma::vec logisticLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_logisticLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_logisticLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1157,7 +1157,7 @@ END_RCPP
 }
 // logisticLassoWarm
 arma::vec logisticLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_logisticLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_logisticLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1180,7 +1180,7 @@ END_RCPP
 }
 // logisticElastic
 arma::vec logisticElastic(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const double alpha, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_logisticElastic(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_logisticElastic(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1203,7 +1203,7 @@ END_RCPP
 }
 // logisticElasticWarm
 arma::vec logisticElasticWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const double alpha, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_logisticElasticWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_logisticElasticWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1227,7 +1227,7 @@ END_RCPP
 }
 // logisticGroupLasso
 arma::vec logisticGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_logisticGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_logisticGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1252,7 +1252,7 @@ END_RCPP
 }
 // logisticGroupLassoWarm
 arma::vec logisticGroupLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_logisticGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_logisticGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1278,7 +1278,7 @@ END_RCPP
 }
 // logisticSparseGroupLasso
 arma::vec logisticSparseGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_logisticSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_logisticSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1303,7 +1303,7 @@ END_RCPP
 }
 // logisticSparseGroupLassoWarm
 arma::vec logisticSparseGroupLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_logisticSparseGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_logisticSparseGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1329,7 +1329,7 @@ END_RCPP
 }
 // logisticScad
 arma::vec logisticScad(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_logisticScad(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_logisticScad(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1353,7 +1353,7 @@ END_RCPP
 }
 // logisticScadWarm
 arma::vec logisticScadWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax, const double para);
-RcppExport SEXP _conquer2adaptive_logisticScadWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_logisticScadWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1377,7 +1377,7 @@ END_RCPP
 }
 // logisticMcp
 arma::vec logisticMcp(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_logisticMcp(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_logisticMcp(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1401,7 +1401,7 @@ END_RCPP
 }
 // logisticMcpWarm
 arma::vec logisticMcpWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax, const double para);
-RcppExport SEXP _conquer2adaptive_logisticMcpWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_logisticMcpWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1425,7 +1425,7 @@ END_RCPP
 }
 // conquerLogisticLasso
 arma::vec conquerLogisticLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerLogisticLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerLogisticLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1444,7 +1444,7 @@ END_RCPP
 }
 // conquerLogisticLassoSeq
 arma::mat conquerLogisticLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerLogisticLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerLogisticLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1463,7 +1463,7 @@ END_RCPP
 }
 // conquerLogisticElastic
 arma::vec conquerLogisticElastic(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double alpha, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerLogisticElastic(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerLogisticElastic(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1483,7 +1483,7 @@ END_RCPP
 }
 // conquerLogisticElasticSeq
 arma::mat conquerLogisticElasticSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double alpha, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerLogisticElasticSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerLogisticElasticSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1503,7 +1503,7 @@ END_RCPP
 }
 // conquerLogisticGroupLasso
 arma::vec conquerLogisticGroupLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerLogisticGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerLogisticGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1525,7 +1525,7 @@ END_RCPP
 }
 // conquerLogisticGroupLassoSeq
 arma::mat conquerLogisticGroupLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerLogisticGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerLogisticGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1547,7 +1547,7 @@ END_RCPP
 }
 // conquerLogisticSparseGroupLasso
 arma::vec conquerLogisticSparseGroupLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerLogisticSparseGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerLogisticSparseGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1569,7 +1569,7 @@ END_RCPP
 }
 // conquerLogisticSparseGroupLassoSeq
 arma::mat conquerLogisticSparseGroupLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerLogisticSparseGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerLogisticSparseGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1591,7 +1591,7 @@ END_RCPP
 }
 // conquerLogisticScad
 arma::vec conquerLogisticScad(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerLogisticScad(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerLogisticScad(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1612,7 +1612,7 @@ END_RCPP
 }
 // conquerLogisticScadSeq
 arma::mat conquerLogisticScadSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerLogisticScadSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerLogisticScadSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1633,7 +1633,7 @@ END_RCPP
 }
 // conquerLogisticMcp
 arma::vec conquerLogisticMcp(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerLogisticMcp(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerLogisticMcp(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1654,7 +1654,7 @@ END_RCPP
 }
 // conquerLogisticMcpSeq
 arma::mat conquerLogisticMcpSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerLogisticMcpSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerLogisticMcpSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1675,7 +1675,7 @@ END_RCPP
 }
 // cvLogisticLassoWarm
 Rcpp::List cvLogisticLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvLogisticLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvLogisticLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1696,7 +1696,7 @@ END_RCPP
 }
 // cvLogisticElasticWarm
 Rcpp::List cvLogisticElasticWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const double alpha, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvLogisticElasticWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvLogisticElasticWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1718,7 +1718,7 @@ END_RCPP
 }
 // cvLogisticGroupLassoWarm
 Rcpp::List cvLogisticGroupLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvLogisticGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvLogisticGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1742,7 +1742,7 @@ END_RCPP
 }
 // cvLogisticSparseGroupLassoWarm
 Rcpp::List cvLogisticSparseGroupLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvLogisticSparseGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvLogisticSparseGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1766,7 +1766,7 @@ END_RCPP
 }
 // cvLogisticScadWarm
 Rcpp::List cvLogisticScadWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_cvLogisticScadWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_cvLogisticScadWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1789,7 +1789,7 @@ END_RCPP
 }
 // cvLogisticMcpWarm
 Rcpp::List cvLogisticMcpWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_cvLogisticMcpWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_cvLogisticMcpWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1812,7 +1812,7 @@ END_RCPP
 }
 // lossParaHd
 double lossParaHd(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, const double tau, const double h, const double h1, const double h3);
-RcppExport SEXP _conquer2adaptive_lossParaHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP) {
+RcppExport SEXP _conquer2_lossParaHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1829,7 +1829,7 @@ END_RCPP
 }
 // updateParaHd
 double updateParaHd(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, arma::vec& grad, const double tau, const double n1, const double h, const double h1, const double h3);
-RcppExport SEXP _conquer2adaptive_updateParaHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP) {
+RcppExport SEXP _conquer2_updateParaHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1848,7 +1848,7 @@ END_RCPP
 }
 // lammParaLasso
 double lammParaLasso(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, arma::vec& beta, const double tau, const double phi, const double gamma, const int p, const double h, const double n1, const double h1, const double h3);
-RcppExport SEXP _conquer2adaptive_lammParaLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h3SEXP) {
+RcppExport SEXP _conquer2_lammParaLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h3SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1870,7 +1870,7 @@ END_RCPP
 }
 // lammParaElastic
 double lammParaElastic(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, arma::vec& beta, const double tau, const double alpha, const double phi, const double gamma, const int p, const double h, const double n1, const double h1, const double h3);
-RcppExport SEXP _conquer2adaptive_lammParaElastic(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h3SEXP) {
+RcppExport SEXP _conquer2_lammParaElastic(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h3SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1893,7 +1893,7 @@ END_RCPP
 }
 // lammParaGroupLasso
 double lammParaGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, arma::vec& beta, const double tau, const arma::vec& group, const arma::vec& weight, const double phi, const double gamma, const int p, const int G, const double h, const double n1, const double h1, const double h3);
-RcppExport SEXP _conquer2adaptive_lammParaGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h3SEXP) {
+RcppExport SEXP _conquer2_lammParaGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h3SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1918,7 +1918,7 @@ END_RCPP
 }
 // lammParaSparseGroupLasso
 double lammParaSparseGroupLasso(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, const double lambda, arma::vec& beta, const double tau, const arma::vec& group, const arma::vec& weight, const double phi, const double gamma, const int p, const int G, const double h, const double n1, const double h1, const double h3);
-RcppExport SEXP _conquer2adaptive_lammParaSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h3SEXP) {
+RcppExport SEXP _conquer2_lammParaSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h3SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1944,7 +1944,7 @@ END_RCPP
 }
 // paraLasso
 arma::vec paraLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double h3, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_paraLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_paraLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1967,7 +1967,7 @@ END_RCPP
 }
 // paraLassoWarm
 arma::vec paraLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double h3, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_paraLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_paraLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -1991,7 +1991,7 @@ END_RCPP
 }
 // paraElastic
 arma::vec paraElastic(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const double alpha, const int p, const double n1, const double h, const double h1, const double h3, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_paraElastic(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_paraElastic(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2015,7 +2015,7 @@ END_RCPP
 }
 // paraElasticWarm
 arma::vec paraElasticWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const double alpha, const int p, const double n1, const double h, const double h1, const double h3, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_paraElasticWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_paraElasticWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2040,7 +2040,7 @@ END_RCPP
 }
 // paraGroupLasso
 arma::vec paraGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double h3, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_paraGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_paraGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2066,7 +2066,7 @@ END_RCPP
 }
 // paraGroupLassoWarm
 arma::vec paraGroupLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double h3, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_paraGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_paraGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2093,7 +2093,7 @@ END_RCPP
 }
 // paraSparseGroupLasso
 arma::vec paraSparseGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double h3, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_paraSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_paraSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2119,7 +2119,7 @@ END_RCPP
 }
 // paraSparseGroupLassoWarm
 arma::vec paraSparseGroupLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double h3, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_paraSparseGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_paraSparseGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2146,7 +2146,7 @@ END_RCPP
 }
 // paraScad
 arma::vec paraScad(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double h3, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_paraScad(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_paraScad(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2171,7 +2171,7 @@ END_RCPP
 }
 // paraScadWarm
 arma::vec paraScadWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double h3, const double phi0, const double gamma, const double epsilon, const int iteMax, const double para);
-RcppExport SEXP _conquer2adaptive_paraScadWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_paraScadWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2196,7 +2196,7 @@ END_RCPP
 }
 // paraMcp
 arma::vec paraMcp(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double h3, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_paraMcp(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_paraMcp(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2221,7 +2221,7 @@ END_RCPP
 }
 // paraMcpWarm
 arma::vec paraMcpWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double h3, const double phi0, const double gamma, const double epsilon, const int iteMax, const double para);
-RcppExport SEXP _conquer2adaptive_paraMcpWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_paraMcpWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h3SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2246,7 +2246,7 @@ END_RCPP
 }
 // conquerParaLasso
 arma::vec conquerParaLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerParaLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerParaLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2265,7 +2265,7 @@ END_RCPP
 }
 // conquerParaLassoSeq
 arma::mat conquerParaLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerParaLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerParaLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2284,7 +2284,7 @@ END_RCPP
 }
 // conquerParaElastic
 arma::vec conquerParaElastic(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double alpha, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerParaElastic(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerParaElastic(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2304,7 +2304,7 @@ END_RCPP
 }
 // conquerParaElasticSeq
 arma::mat conquerParaElasticSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double alpha, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerParaElasticSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerParaElasticSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2324,7 +2324,7 @@ END_RCPP
 }
 // conquerParaGroupLasso
 arma::vec conquerParaGroupLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerParaGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerParaGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2346,7 +2346,7 @@ END_RCPP
 }
 // conquerParaGroupLassoSeq
 arma::mat conquerParaGroupLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerParaGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerParaGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2368,7 +2368,7 @@ END_RCPP
 }
 // conquerParaSparseGroupLasso
 arma::vec conquerParaSparseGroupLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerParaSparseGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerParaSparseGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2390,7 +2390,7 @@ END_RCPP
 }
 // conquerParaSparseGroupLassoSeq
 arma::mat conquerParaSparseGroupLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerParaSparseGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerParaSparseGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2412,7 +2412,7 @@ END_RCPP
 }
 // conquerParaScad
 arma::vec conquerParaScad(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerParaScad(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerParaScad(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2433,7 +2433,7 @@ END_RCPP
 }
 // conquerParaScadSeq
 arma::mat conquerParaScadSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerParaScadSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerParaScadSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2454,7 +2454,7 @@ END_RCPP
 }
 // conquerParaMcp
 arma::vec conquerParaMcp(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerParaMcp(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerParaMcp(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2475,7 +2475,7 @@ END_RCPP
 }
 // conquerParaMcpSeq
 arma::mat conquerParaMcpSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerParaMcpSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerParaMcpSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2496,7 +2496,7 @@ END_RCPP
 }
 // cvParaLassoWarm
 Rcpp::List cvParaLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvParaLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvParaLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2517,7 +2517,7 @@ END_RCPP
 }
 // cvParaElasticWarm
 Rcpp::List cvParaElasticWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const double alpha, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvParaElasticWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvParaElasticWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2539,7 +2539,7 @@ END_RCPP
 }
 // cvParaGroupLassoWarm
 Rcpp::List cvParaGroupLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvParaGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvParaGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2563,7 +2563,7 @@ END_RCPP
 }
 // cvParaSparseGroupLassoWarm
 Rcpp::List cvParaSparseGroupLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvParaSparseGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvParaSparseGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2587,7 +2587,7 @@ END_RCPP
 }
 // cvParaScadWarm
 Rcpp::List cvParaScadWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_cvParaScadWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_cvParaScadWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2610,7 +2610,7 @@ END_RCPP
 }
 // cvParaMcpWarm
 Rcpp::List cvParaMcpWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_cvParaMcpWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_cvParaMcpWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2633,7 +2633,7 @@ END_RCPP
 }
 // lossTrianHd
 double lossTrianHd(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, const double tau, const double h, const double h1, const double h2);
-RcppExport SEXP _conquer2adaptive_lossTrianHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP) {
+RcppExport SEXP _conquer2_lossTrianHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2650,7 +2650,7 @@ END_RCPP
 }
 // updateTrianHd
 double updateTrianHd(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, arma::vec& grad, const double tau, const double n1, const double h, const double h1, const double h2);
-RcppExport SEXP _conquer2adaptive_updateTrianHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP) {
+RcppExport SEXP _conquer2_updateTrianHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2669,7 +2669,7 @@ END_RCPP
 }
 // lammTrianLasso
 double lammTrianLasso(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, arma::vec& beta, const double tau, const double phi, const double gamma, const int p, const double h, const double n1, const double h1, const double h2);
-RcppExport SEXP _conquer2adaptive_lammTrianLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
+RcppExport SEXP _conquer2_lammTrianLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2691,7 +2691,7 @@ END_RCPP
 }
 // lammTrianElastic
 double lammTrianElastic(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, arma::vec& beta, const double tau, const double alpha, const double phi, const double gamma, const int p, const double h, const double n1, const double h1, const double h2);
-RcppExport SEXP _conquer2adaptive_lammTrianElastic(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
+RcppExport SEXP _conquer2_lammTrianElastic(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2714,7 +2714,7 @@ END_RCPP
 }
 // lammTrianGroupLasso
 double lammTrianGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, arma::vec& beta, const double tau, const arma::vec& group, const arma::vec& weight, const double phi, const double gamma, const int p, const int G, const double h, const double n1, const double h1, const double h2);
-RcppExport SEXP _conquer2adaptive_lammTrianGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
+RcppExport SEXP _conquer2_lammTrianGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2739,7 +2739,7 @@ END_RCPP
 }
 // lammTrianSparseGroupLasso
 double lammTrianSparseGroupLasso(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, const double lambda, arma::vec& beta, const double tau, const arma::vec& group, const arma::vec& weight, const double phi, const double gamma, const int p, const int G, const double h, const double n1, const double h1, const double h2);
-RcppExport SEXP _conquer2adaptive_lammTrianSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
+RcppExport SEXP _conquer2_lammTrianSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2765,7 +2765,7 @@ END_RCPP
 }
 // trianLasso
 arma::vec trianLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_trianLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_trianLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2788,7 +2788,7 @@ END_RCPP
 }
 // trianLassoWarm
 arma::vec trianLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_trianLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_trianLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2812,7 +2812,7 @@ END_RCPP
 }
 // trianElastic
 arma::vec trianElastic(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const double alpha, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_trianElastic(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_trianElastic(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2836,7 +2836,7 @@ END_RCPP
 }
 // trianElasticWarm
 arma::vec trianElasticWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const double alpha, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_trianElasticWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_trianElasticWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2861,7 +2861,7 @@ END_RCPP
 }
 // trianGroupLasso
 arma::vec trianGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_trianGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_trianGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2887,7 +2887,7 @@ END_RCPP
 }
 // trianGroupLassoWarm
 arma::vec trianGroupLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_trianGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_trianGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2914,7 +2914,7 @@ END_RCPP
 }
 // trianSparseGroupLasso
 arma::vec trianSparseGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_trianSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_trianSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2940,7 +2940,7 @@ END_RCPP
 }
 // trianSparseGroupLassoWarm
 arma::vec trianSparseGroupLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_trianSparseGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_trianSparseGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2967,7 +2967,7 @@ END_RCPP
 }
 // trianScad
 arma::vec trianScad(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_trianScad(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_trianScad(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -2992,7 +2992,7 @@ END_RCPP
 }
 // trianScadWarm
 arma::vec trianScadWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax, const double para);
-RcppExport SEXP _conquer2adaptive_trianScadWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_trianScadWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3017,7 +3017,7 @@ END_RCPP
 }
 // trianMcp
 arma::vec trianMcp(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_trianMcp(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_trianMcp(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3042,7 +3042,7 @@ END_RCPP
 }
 // trianMcpWarm
 arma::vec trianMcpWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double h2, const double phi0, const double gamma, const double epsilon, const int iteMax, const double para);
-RcppExport SEXP _conquer2adaptive_trianMcpWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_trianMcpWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP h2SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3067,7 +3067,7 @@ END_RCPP
 }
 // conquerTrianLasso
 arma::vec conquerTrianLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerTrianLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerTrianLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3086,7 +3086,7 @@ END_RCPP
 }
 // conquerTrianLassoSeq
 arma::mat conquerTrianLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerTrianLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerTrianLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3105,7 +3105,7 @@ END_RCPP
 }
 // conquerTrianElastic
 arma::vec conquerTrianElastic(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double alpha, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerTrianElastic(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerTrianElastic(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3125,7 +3125,7 @@ END_RCPP
 }
 // conquerTrianElasticSeq
 arma::mat conquerTrianElasticSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double alpha, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerTrianElasticSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerTrianElasticSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3145,7 +3145,7 @@ END_RCPP
 }
 // conquerTrianGroupLasso
 arma::vec conquerTrianGroupLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerTrianGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerTrianGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3167,7 +3167,7 @@ END_RCPP
 }
 // conquerTrianGroupLassoSeq
 arma::mat conquerTrianGroupLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerTrianGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerTrianGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3189,7 +3189,7 @@ END_RCPP
 }
 // conquerTrianSparseGroupLasso
 arma::vec conquerTrianSparseGroupLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerTrianSparseGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerTrianSparseGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3211,7 +3211,7 @@ END_RCPP
 }
 // conquerTrianSparseGroupLassoSeq
 arma::mat conquerTrianSparseGroupLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerTrianSparseGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerTrianSparseGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3233,7 +3233,7 @@ END_RCPP
 }
 // conquerTrianScad
 arma::vec conquerTrianScad(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerTrianScad(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerTrianScad(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3254,7 +3254,7 @@ END_RCPP
 }
 // conquerTrianScadSeq
 arma::mat conquerTrianScadSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerTrianScadSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerTrianScadSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3275,7 +3275,7 @@ END_RCPP
 }
 // conquerTrianMcp
 arma::vec conquerTrianMcp(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerTrianMcp(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerTrianMcp(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3296,7 +3296,7 @@ END_RCPP
 }
 // conquerTrianMcpSeq
 arma::mat conquerTrianMcpSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerTrianMcpSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerTrianMcpSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3317,7 +3317,7 @@ END_RCPP
 }
 // cvTrianLassoWarm
 Rcpp::List cvTrianLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvTrianLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvTrianLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3338,7 +3338,7 @@ END_RCPP
 }
 // cvTrianElasticWarm
 Rcpp::List cvTrianElasticWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const double alpha, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvTrianElasticWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvTrianElasticWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3360,7 +3360,7 @@ END_RCPP
 }
 // cvTrianGroupLassoWarm
 Rcpp::List cvTrianGroupLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvTrianGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvTrianGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3384,7 +3384,7 @@ END_RCPP
 }
 // cvTrianSparseGroupLassoWarm
 Rcpp::List cvTrianSparseGroupLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvTrianSparseGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvTrianSparseGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3408,7 +3408,7 @@ END_RCPP
 }
 // cvTrianScadWarm
 Rcpp::List cvTrianScadWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_cvTrianScadWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_cvTrianScadWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3431,7 +3431,7 @@ END_RCPP
 }
 // cvTrianMcpWarm
 Rcpp::List cvTrianMcpWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_cvTrianMcpWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_cvTrianMcpWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3454,7 +3454,7 @@ END_RCPP
 }
 // lossUnifHd
 double lossUnifHd(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, const double tau, const double h, const double h1);
-RcppExport SEXP _conquer2adaptive_lossUnifHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_lossUnifHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3470,7 +3470,7 @@ END_RCPP
 }
 // updateUnifHd
 double updateUnifHd(const arma::mat& Z, const arma::vec& Y, const arma::vec& beta, arma::vec& grad, const double tau, const double n1, const double h, const double h1);
-RcppExport SEXP _conquer2adaptive_updateUnifHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_updateUnifHd(SEXP ZSEXP, SEXP YSEXP, SEXP betaSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3488,7 +3488,7 @@ END_RCPP
 }
 // lammUnifLasso
 double lammUnifLasso(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, arma::vec& beta, const double tau, const double phi, const double gamma, const int p, const double h, const double n1, const double h1);
-RcppExport SEXP _conquer2adaptive_lammUnifLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_lammUnifLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3509,7 +3509,7 @@ END_RCPP
 }
 // lammUnifElastic
 double lammUnifElastic(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, arma::vec& beta, const double tau, const double alpha, const double phi, const double gamma, const int p, const double h, const double n1, const double h1);
-RcppExport SEXP _conquer2adaptive_lammUnifElastic(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_lammUnifElastic(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3531,7 +3531,7 @@ END_RCPP
 }
 // lammUnifGroupLasso
 double lammUnifGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, arma::vec& beta, const double tau, const arma::vec& group, const arma::vec& weight, const double phi, const double gamma, const int p, const int G, const double h, const double n1, const double h1);
-RcppExport SEXP _conquer2adaptive_lammUnifGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_lammUnifGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3555,7 +3555,7 @@ END_RCPP
 }
 // lammUnifSparseGroupLasso
 double lammUnifSparseGroupLasso(const arma::mat& Z, const arma::vec& Y, const arma::vec& Lambda, const double lambda, arma::vec& beta, const double tau, const arma::vec& group, const arma::vec& weight, const double phi, const double gamma, const int p, const int G, const double h, const double n1, const double h1);
-RcppExport SEXP _conquer2adaptive_lammUnifSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_lammUnifSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP LambdaSEXP, SEXP lambdaSEXP, SEXP betaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP phiSEXP, SEXP gammaSEXP, SEXP pSEXP, SEXP GSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3580,7 +3580,7 @@ END_RCPP
 }
 // unifLasso
 arma::vec unifLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_unifLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_unifLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3602,7 +3602,7 @@ END_RCPP
 }
 // unifLassoWarm
 arma::vec unifLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_unifLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_unifLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3625,7 +3625,7 @@ END_RCPP
 }
 // unifElastic
 arma::vec unifElastic(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const double alpha, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_unifElastic(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_unifElastic(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3648,7 +3648,7 @@ END_RCPP
 }
 // unifElasticWarm
 arma::vec unifElasticWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const double alpha, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_unifElasticWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_unifElasticWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3672,7 +3672,7 @@ END_RCPP
 }
 // unifGroupLasso
 arma::vec unifGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_unifGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_unifGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3697,7 +3697,7 @@ END_RCPP
 }
 // unifGroupLassoWarm
 arma::vec unifGroupLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_unifGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_unifGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3723,7 +3723,7 @@ END_RCPP
 }
 // unifSparseGroupLasso
 arma::vec unifSparseGroupLasso(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_unifSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_unifSparseGroupLasso(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3748,7 +3748,7 @@ END_RCPP
 }
 // unifSparseGroupLassoWarm
 arma::vec unifSparseGroupLassoWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const arma::vec& group, const arma::vec& weight, const int p, const int G, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_unifSparseGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_unifSparseGroupLassoWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP pSEXP, SEXP GSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3774,7 +3774,7 @@ END_RCPP
 }
 // unifScad
 arma::vec unifScad(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_unifScad(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_unifScad(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3798,7 +3798,7 @@ END_RCPP
 }
 // unifScadWarm
 arma::vec unifScadWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax, const double para);
-RcppExport SEXP _conquer2adaptive_unifScadWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_unifScadWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3822,7 +3822,7 @@ END_RCPP
 }
 // unifMcp
 arma::vec unifMcp(const arma::mat& Z, const arma::vec& Y, const double lambda, const double tau, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_unifMcp(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_unifMcp(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3846,7 +3846,7 @@ END_RCPP
 }
 // unifMcpWarm
 arma::vec unifMcpWarm(const arma::mat& Z, const arma::vec& Y, const double lambda, const arma::vec& betaWarm, const double tau, const int p, const double n1, const double h, const double h1, const double phi0, const double gamma, const double epsilon, const int iteMax, const double para);
-RcppExport SEXP _conquer2adaptive_unifMcpWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_unifMcpWarm(SEXP ZSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP betaWarmSEXP, SEXP tauSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP hSEXP, SEXP h1SEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3870,7 +3870,7 @@ END_RCPP
 }
 // conquerUnifLasso
 arma::vec conquerUnifLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerUnifLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerUnifLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3889,7 +3889,7 @@ END_RCPP
 }
 // conquerUnifLassoSeq
 arma::mat conquerUnifLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerUnifLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerUnifLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3908,7 +3908,7 @@ END_RCPP
 }
 // conquerUnifElastic
 arma::vec conquerUnifElastic(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double alpha, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerUnifElastic(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerUnifElastic(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3928,7 +3928,7 @@ END_RCPP
 }
 // conquerUnifElasticSeq
 arma::mat conquerUnifElasticSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double alpha, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerUnifElasticSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerUnifElasticSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3948,7 +3948,7 @@ END_RCPP
 }
 // conquerUnifGroupLasso
 arma::vec conquerUnifGroupLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerUnifGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerUnifGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3970,7 +3970,7 @@ END_RCPP
 }
 // conquerUnifGroupLassoSeq
 arma::mat conquerUnifGroupLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerUnifGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerUnifGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -3992,7 +3992,7 @@ END_RCPP
 }
 // conquerUnifSparseGroupLasso
 arma::vec conquerUnifSparseGroupLasso(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerUnifSparseGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerUnifSparseGroupLasso(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4014,7 +4014,7 @@ END_RCPP
 }
 // conquerUnifSparseGroupLassoSeq
 arma::mat conquerUnifSparseGroupLassoSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_conquerUnifSparseGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_conquerUnifSparseGroupLassoSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4036,7 +4036,7 @@ END_RCPP
 }
 // conquerUnifScad
 arma::vec conquerUnifScad(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerUnifScad(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerUnifScad(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4057,7 +4057,7 @@ END_RCPP
 }
 // conquerUnifScadSeq
 arma::mat conquerUnifScadSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerUnifScadSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerUnifScadSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4078,7 +4078,7 @@ END_RCPP
 }
 // conquerUnifMcp
 arma::vec conquerUnifMcp(const arma::mat& X, arma::vec Y, const double lambda, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerUnifMcp(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerUnifMcp(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4099,7 +4099,7 @@ END_RCPP
 }
 // conquerUnifMcpSeq
 arma::mat conquerUnifMcpSeq(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const double tau, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_conquerUnifMcpSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_conquerUnifMcpSeq(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4120,7 +4120,7 @@ END_RCPP
 }
 // cvUnifLassoWarm
 Rcpp::List cvUnifLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvUnifLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvUnifLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4141,7 +4141,7 @@ END_RCPP
 }
 // cvUnifElasticWarm
 Rcpp::List cvUnifElasticWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const double alpha, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvUnifElasticWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvUnifElasticWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP alphaSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4163,7 +4163,7 @@ END_RCPP
 }
 // cvUnifGroupLassoWarm
 Rcpp::List cvUnifGroupLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvUnifGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvUnifGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4187,7 +4187,7 @@ END_RCPP
 }
 // cvUnifSparseGroupLassoWarm
 Rcpp::List cvUnifSparseGroupLassoWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const arma::vec& group, const arma::vec& weight, const int G, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax);
-RcppExport SEXP _conquer2adaptive_cvUnifSparseGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_cvUnifSparseGroupLassoWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP groupSEXP, SEXP weightSEXP, SEXP GSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4211,7 +4211,7 @@ END_RCPP
 }
 // cvUnifScadWarm
 Rcpp::List cvUnifScadWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_cvUnifScadWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_cvUnifScadWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4234,7 +4234,7 @@ END_RCPP
 }
 // cvUnifMcpWarm
 Rcpp::List cvUnifMcpWarm(const arma::mat& X, arma::vec Y, const arma::vec& lambdaSeq, const arma::vec& folds, const double tau, const int kfolds, const double h, const double phi0, const double gamma, const double epsilon, const int iteMax, const int iteTight, const double para);
-RcppExport SEXP _conquer2adaptive_cvUnifMcpWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
+RcppExport SEXP _conquer2_cvUnifMcpWarm(SEXP XSEXP, SEXP YSEXP, SEXP lambdaSeqSEXP, SEXP foldsSEXP, SEXP tauSEXP, SEXP kfoldsSEXP, SEXP hSEXP, SEXP phi0SEXP, SEXP gammaSEXP, SEXP epsilonSEXP, SEXP iteMaxSEXP, SEXP iteTightSEXP, SEXP paraSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4257,7 +4257,7 @@ END_RCPP
 }
 // updateHuber
 void updateHuber(const arma::mat& Z, const arma::vec& res, const double tau, arma::vec& der, arma::vec& grad, const int n, const double rob, const double n1);
-RcppExport SEXP _conquer2adaptive_updateHuber(SEXP ZSEXP, SEXP resSEXP, SEXP tauSEXP, SEXP derSEXP, SEXP gradSEXP, SEXP nSEXP, SEXP robSEXP, SEXP n1SEXP) {
+RcppExport SEXP _conquer2_updateHuber(SEXP ZSEXP, SEXP resSEXP, SEXP tauSEXP, SEXP derSEXP, SEXP gradSEXP, SEXP nSEXP, SEXP robSEXP, SEXP n1SEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const arma::mat& >::type Z(ZSEXP);
@@ -4274,7 +4274,7 @@ END_RCPP
 }
 // updateGauss
 void updateGauss(const arma::mat& Z, const arma::vec& res, arma::vec& der, arma::vec& grad, const double tau, const double n1, const double h1);
-RcppExport SEXP _conquer2adaptive_updateGauss(SEXP ZSEXP, SEXP resSEXP, SEXP derSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_updateGauss(SEXP ZSEXP, SEXP resSEXP, SEXP derSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const arma::mat& >::type Z(ZSEXP);
@@ -4290,7 +4290,7 @@ END_RCPP
 }
 // updateLogistic
 void updateLogistic(const arma::mat& Z, const arma::vec& res, arma::vec& der, arma::vec& grad, const double tau, const double n1, const double h1);
-RcppExport SEXP _conquer2adaptive_updateLogistic(SEXP ZSEXP, SEXP resSEXP, SEXP derSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_updateLogistic(SEXP ZSEXP, SEXP resSEXP, SEXP derSEXP, SEXP gradSEXP, SEXP tauSEXP, SEXP n1SEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const arma::mat& >::type Z(ZSEXP);
@@ -4306,7 +4306,7 @@ END_RCPP
 }
 // updateUnif
 void updateUnif(const arma::mat& Z, const arma::vec& res, arma::vec& der, arma::vec& grad, const int n, const double tau, const double h, const double n1, const double h1);
-RcppExport SEXP _conquer2adaptive_updateUnif(SEXP ZSEXP, SEXP resSEXP, SEXP derSEXP, SEXP gradSEXP, SEXP nSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
+RcppExport SEXP _conquer2_updateUnif(SEXP ZSEXP, SEXP resSEXP, SEXP derSEXP, SEXP gradSEXP, SEXP nSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const arma::mat& >::type Z(ZSEXP);
@@ -4324,7 +4324,7 @@ END_RCPP
 }
 // updatePara
 void updatePara(const arma::mat& Z, const arma::vec& res, arma::vec& der, arma::vec& grad, const int n, const double tau, const double h, const double n1, const double h1, const double h3);
-RcppExport SEXP _conquer2adaptive_updatePara(SEXP ZSEXP, SEXP resSEXP, SEXP derSEXP, SEXP gradSEXP, SEXP nSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h3SEXP) {
+RcppExport SEXP _conquer2_updatePara(SEXP ZSEXP, SEXP resSEXP, SEXP derSEXP, SEXP gradSEXP, SEXP nSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h3SEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const arma::mat& >::type Z(ZSEXP);
@@ -4343,7 +4343,7 @@ END_RCPP
 }
 // updateTrian
 void updateTrian(const arma::mat& Z, const arma::vec& res, arma::vec& der, arma::vec& grad, const int n, const double tau, const double h, const double n1, const double h1, const double h2);
-RcppExport SEXP _conquer2adaptive_updateTrian(SEXP ZSEXP, SEXP resSEXP, SEXP derSEXP, SEXP gradSEXP, SEXP nSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
+RcppExport SEXP _conquer2_updateTrian(SEXP ZSEXP, SEXP resSEXP, SEXP derSEXP, SEXP gradSEXP, SEXP nSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP n1SEXP, SEXP h1SEXP, SEXP h2SEXP) {
 BEGIN_RCPP
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< const arma::mat& >::type Z(ZSEXP);
@@ -4362,7 +4362,7 @@ END_RCPP
 }
 // huberReg
 arma::vec huberReg(const arma::mat& Z, const arma::vec& Y, const double tau, arma::vec& der, arma::vec& gradOld, arma::vec& gradNew, const int n, const int p, const double n1, const double tol, const double constTau, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_huberReg(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP derSEXP, SEXP gradOldSEXP, SEXP gradNewSEXP, SEXP nSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP tolSEXP, SEXP constTauSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_huberReg(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP derSEXP, SEXP gradOldSEXP, SEXP gradNewSEXP, SEXP nSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP tolSEXP, SEXP constTauSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4385,7 +4385,7 @@ END_RCPP
 }
 // smqrGauss
 Rcpp::List smqrGauss(const arma::mat& X, arma::vec Y, const double tau, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrGauss(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrGauss(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4403,7 +4403,7 @@ END_RCPP
 }
 // smqrGaussNsd
 Rcpp::List smqrGaussNsd(const arma::mat& Z, const arma::vec& Y, const double tau, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrGaussNsd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrGaussNsd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4421,7 +4421,7 @@ END_RCPP
 }
 // smqrGaussIni
 arma::vec smqrGaussIni(const arma::mat& X, arma::vec Y, const arma::vec& betaHat, const int p, const double tau, double h, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrGaussIni(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrGaussIni(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4440,7 +4440,7 @@ END_RCPP
 }
 // smqrLogistic
 Rcpp::List smqrLogistic(const arma::mat& X, arma::vec Y, const double tau, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrLogistic(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrLogistic(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4458,7 +4458,7 @@ END_RCPP
 }
 // smqrLogisticNsd
 Rcpp::List smqrLogisticNsd(const arma::mat& Z, const arma::vec& Y, const double tau, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrLogisticNsd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrLogisticNsd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4476,7 +4476,7 @@ END_RCPP
 }
 // smqrLogisticIni
 arma::vec smqrLogisticIni(const arma::mat& X, arma::vec Y, const arma::vec& betaHat, const int p, const double tau, double h, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrLogisticIni(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrLogisticIni(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4495,7 +4495,7 @@ END_RCPP
 }
 // smqrUnif
 Rcpp::List smqrUnif(const arma::mat& X, arma::vec Y, const double tau, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrUnif(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrUnif(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4513,7 +4513,7 @@ END_RCPP
 }
 // smqrUnifNsd
 Rcpp::List smqrUnifNsd(const arma::mat& Z, const arma::vec& Y, const double tau, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrUnifNsd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrUnifNsd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4531,7 +4531,7 @@ END_RCPP
 }
 // smqrUnifIni
 arma::vec smqrUnifIni(const arma::mat& X, arma::vec Y, const arma::vec& betaHat, const int p, const double tau, double h, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrUnifIni(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrUnifIni(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4550,7 +4550,7 @@ END_RCPP
 }
 // smqrPara
 Rcpp::List smqrPara(const arma::mat& X, arma::vec Y, const double tau, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrPara(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrPara(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4568,7 +4568,7 @@ END_RCPP
 }
 // smqrParaNsd
 Rcpp::List smqrParaNsd(const arma::mat& Z, const arma::vec& Y, const double tau, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrParaNsd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrParaNsd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4586,7 +4586,7 @@ END_RCPP
 }
 // smqrParaIni
 arma::vec smqrParaIni(const arma::mat& X, arma::vec Y, const arma::vec& betaHat, const int p, const double tau, double h, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrParaIni(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrParaIni(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4605,7 +4605,7 @@ END_RCPP
 }
 // smqrTrian
 Rcpp::List smqrTrian(const arma::mat& X, arma::vec Y, const double tau, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrTrian(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrTrian(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4623,7 +4623,7 @@ END_RCPP
 }
 // smqrTrianNsd
 Rcpp::List smqrTrianNsd(const arma::mat& Z, const arma::vec& Y, const double tau, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrTrianNsd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrTrianNsd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4641,7 +4641,7 @@ END_RCPP
 }
 // smqrTrianIni
 arma::vec smqrTrianIni(const arma::mat& X, arma::vec Y, const arma::vec& betaHat, const int p, const double tau, double h, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrTrianIni(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrTrianIni(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4660,7 +4660,7 @@ END_RCPP
 }
 // smqrGaussProc
 Rcpp::List smqrGaussProc(const arma::mat& X, arma::vec Y, const arma::vec tauSeq, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrGaussProc(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrGaussProc(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4678,7 +4678,7 @@ END_RCPP
 }
 // smqrLogisticProc
 Rcpp::List smqrLogisticProc(const arma::mat& X, arma::vec Y, const arma::vec tauSeq, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrLogisticProc(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrLogisticProc(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4696,7 +4696,7 @@ END_RCPP
 }
 // smqrUnifProc
 Rcpp::List smqrUnifProc(const arma::mat& X, arma::vec Y, const arma::vec tauSeq, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrUnifProc(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrUnifProc(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4714,7 +4714,7 @@ END_RCPP
 }
 // smqrParaProc
 Rcpp::List smqrParaProc(const arma::mat& X, arma::vec Y, const arma::vec tauSeq, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrParaProc(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrParaProc(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4732,7 +4732,7 @@ END_RCPP
 }
 // smqrTrianProc
 Rcpp::List smqrTrianProc(const arma::mat& X, arma::vec Y, const arma::vec tauSeq, double h, const double constTau, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrTrianProc(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrTrianProc(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4750,7 +4750,7 @@ END_RCPP
 }
 // smqrGaussInf
 arma::mat smqrGaussInf(const arma::mat& X, const arma::vec& Y, const arma::vec& betaHat, const int n, const int p, double h, const double tau, const int B, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrGaussInf(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrGaussInf(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4771,7 +4771,7 @@ END_RCPP
 }
 // smqrLogisticInf
 arma::mat smqrLogisticInf(const arma::mat& X, const arma::vec& Y, const arma::vec& betaHat, const int n, const int p, double h, const double tau, const int B, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrLogisticInf(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrLogisticInf(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4792,7 +4792,7 @@ END_RCPP
 }
 // smqrUnifInf
 arma::mat smqrUnifInf(const arma::mat& X, const arma::vec& Y, const arma::vec& betaHat, const int n, const int p, double h, const double tau, const int B, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrUnifInf(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrUnifInf(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4813,7 +4813,7 @@ END_RCPP
 }
 // smqrParaInf
 arma::mat smqrParaInf(const arma::mat& X, const arma::vec& Y, const arma::vec& betaHat, const int n, const int p, double h, const double tau, const int B, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrParaInf(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrParaInf(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4834,7 +4834,7 @@ END_RCPP
 }
 // smqrTrianInf
 arma::mat smqrTrianInf(const arma::mat& X, const arma::vec& Y, const arma::vec& betaHat, const int n, const int p, double h, const double tau, const int B, const double tol, const int iteMax, const double stepMax);
-RcppExport SEXP _conquer2adaptive_smqrTrianInf(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
+RcppExport SEXP _conquer2_smqrTrianInf(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP, SEXP stepMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4855,7 +4855,7 @@ END_RCPP
 }
 // huberRegUbd
 arma::vec huberRegUbd(const arma::mat& Z, const arma::vec& Y, const double tau, arma::vec& der, arma::vec& gradOld, arma::vec& gradNew, const int n, const int p, const double n1, const double tol, const double constTau, const int iteMax);
-RcppExport SEXP _conquer2adaptive_huberRegUbd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP derSEXP, SEXP gradOldSEXP, SEXP gradNewSEXP, SEXP nSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP tolSEXP, SEXP constTauSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_huberRegUbd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP derSEXP, SEXP gradOldSEXP, SEXP gradNewSEXP, SEXP nSEXP, SEXP pSEXP, SEXP n1SEXP, SEXP tolSEXP, SEXP constTauSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4877,7 +4877,7 @@ END_RCPP
 }
 // smqrGaussUbd
 Rcpp::List smqrGaussUbd(const arma::mat& X, arma::vec Y, const double tau, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrGaussUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrGaussUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4894,7 +4894,7 @@ END_RCPP
 }
 // smqrGaussNsdUbd
 Rcpp::List smqrGaussNsdUbd(const arma::mat& Z, const arma::vec& Y, const double tau, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrGaussNsdUbd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrGaussNsdUbd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4911,7 +4911,7 @@ END_RCPP
 }
 // smqrGaussIniUbd
 arma::vec smqrGaussIniUbd(const arma::mat& X, arma::vec Y, const arma::vec& betaHat, const int p, const double tau, double h, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrGaussIniUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrGaussIniUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4929,7 +4929,7 @@ END_RCPP
 }
 // smqrLogisticUbd
 Rcpp::List smqrLogisticUbd(const arma::mat& X, arma::vec Y, const double tau, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrLogisticUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrLogisticUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4946,7 +4946,7 @@ END_RCPP
 }
 // smqrLogisticNsdUbd
 Rcpp::List smqrLogisticNsdUbd(const arma::mat& Z, const arma::vec& Y, const double tau, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrLogisticNsdUbd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrLogisticNsdUbd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4963,7 +4963,7 @@ END_RCPP
 }
 // smqrLogisticIniUbd
 arma::vec smqrLogisticIniUbd(const arma::mat& X, arma::vec Y, const arma::vec& betaHat, const int p, const double tau, double h, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrLogisticIniUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrLogisticIniUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4981,7 +4981,7 @@ END_RCPP
 }
 // smqrUnifUbd
 Rcpp::List smqrUnifUbd(const arma::mat& X, arma::vec Y, const double tau, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrUnifUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrUnifUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -4998,7 +4998,7 @@ END_RCPP
 }
 // smqrUnifNsdUbd
 Rcpp::List smqrUnifNsdUbd(const arma::mat& Z, const arma::vec& Y, const double tau, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrUnifNsdUbd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrUnifNsdUbd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5015,7 +5015,7 @@ END_RCPP
 }
 // smqrUnifIniUbd
 arma::vec smqrUnifIniUbd(const arma::mat& X, arma::vec Y, const arma::vec& betaHat, const int p, const double tau, double h, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrUnifIniUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrUnifIniUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5033,7 +5033,7 @@ END_RCPP
 }
 // smqrParaUbd
 Rcpp::List smqrParaUbd(const arma::mat& X, arma::vec Y, const double tau, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrParaUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrParaUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5050,7 +5050,7 @@ END_RCPP
 }
 // smqrParaNsdUbd
 Rcpp::List smqrParaNsdUbd(const arma::mat& Z, const arma::vec& Y, const double tau, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrParaNsdUbd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrParaNsdUbd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5067,7 +5067,7 @@ END_RCPP
 }
 // smqrParaIniUbd
 arma::vec smqrParaIniUbd(const arma::mat& X, arma::vec Y, const arma::vec& betaHat, const int p, const double tau, double h, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrParaIniUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrParaIniUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5085,7 +5085,7 @@ END_RCPP
 }
 // smqrTrianUbd
 Rcpp::List smqrTrianUbd(const arma::mat& X, arma::vec Y, const double tau, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrTrianUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrTrianUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5102,7 +5102,7 @@ END_RCPP
 }
 // smqrTrianNsdUbd
 Rcpp::List smqrTrianNsdUbd(const arma::mat& Z, const arma::vec& Y, const double tau, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrTrianNsdUbd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrTrianNsdUbd(SEXP ZSEXP, SEXP YSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5119,7 +5119,7 @@ END_RCPP
 }
 // smqrTrianIniUbd
 arma::vec smqrTrianIniUbd(const arma::mat& X, arma::vec Y, const arma::vec& betaHat, const int p, const double tau, double h, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrTrianIniUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrTrianIniUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP pSEXP, SEXP tauSEXP, SEXP hSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5137,7 +5137,7 @@ END_RCPP
 }
 // smqrGaussProcUbd
 Rcpp::List smqrGaussProcUbd(const arma::mat& X, arma::vec Y, const arma::vec tauSeq, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrGaussProcUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrGaussProcUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5154,7 +5154,7 @@ END_RCPP
 }
 // smqrLogisticProcUbd
 Rcpp::List smqrLogisticProcUbd(const arma::mat& X, arma::vec Y, const arma::vec tauSeq, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrLogisticProcUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrLogisticProcUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5171,7 +5171,7 @@ END_RCPP
 }
 // smqrUnifProcUbd
 Rcpp::List smqrUnifProcUbd(const arma::mat& X, arma::vec Y, const arma::vec tauSeq, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrUnifProcUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrUnifProcUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5188,7 +5188,7 @@ END_RCPP
 }
 // smqrParaProcUbd
 Rcpp::List smqrParaProcUbd(const arma::mat& X, arma::vec Y, const arma::vec tauSeq, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrParaProcUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrParaProcUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5205,7 +5205,7 @@ END_RCPP
 }
 // smqrTrianProcUbd
 Rcpp::List smqrTrianProcUbd(const arma::mat& X, arma::vec Y, const arma::vec tauSeq, double h, const double constTau, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrTrianProcUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrTrianProcUbd(SEXP XSEXP, SEXP YSEXP, SEXP tauSeqSEXP, SEXP hSEXP, SEXP constTauSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5222,7 +5222,7 @@ END_RCPP
 }
 // smqrGaussInfUbd
 arma::mat smqrGaussInfUbd(const arma::mat& X, const arma::vec& Y, const arma::vec& betaHat, const int n, const int p, double h, const double tau, const int B, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrGaussInfUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrGaussInfUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5242,7 +5242,7 @@ END_RCPP
 }
 // smqrLogisticInfUbd
 arma::mat smqrLogisticInfUbd(const arma::mat& X, const arma::vec& Y, const arma::vec& betaHat, const int n, const int p, double h, const double tau, const int B, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrLogisticInfUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrLogisticInfUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5262,7 +5262,7 @@ END_RCPP
 }
 // smqrUnifInfUbd
 arma::mat smqrUnifInfUbd(const arma::mat& X, const arma::vec& Y, const arma::vec& betaHat, const int n, const int p, double h, const double tau, const int B, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrUnifInfUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrUnifInfUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5282,7 +5282,7 @@ END_RCPP
 }
 // smqrParaInfUbd
 arma::mat smqrParaInfUbd(const arma::mat& X, const arma::vec& Y, const arma::vec& betaHat, const int n, const int p, double h, const double tau, const int B, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrParaInfUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrParaInfUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5302,7 +5302,7 @@ END_RCPP
 }
 // smqrTrianInfUbd
 arma::mat smqrTrianInfUbd(const arma::mat& X, const arma::vec& Y, const arma::vec& betaHat, const int n, const int p, double h, const double tau, const int B, const double tol, const int iteMax);
-RcppExport SEXP _conquer2adaptive_smqrTrianInfUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
+RcppExport SEXP _conquer2_smqrTrianInfUbd(SEXP XSEXP, SEXP YSEXP, SEXP betaHatSEXP, SEXP nSEXP, SEXP pSEXP, SEXP hSEXP, SEXP tauSEXP, SEXP BSEXP, SEXP tolSEXP, SEXP iteMaxSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5322,7 +5322,7 @@ END_RCPP
 }
 // asymptoticCI
 arma::mat asymptoticCI(const arma::mat& X, const arma::vec& res, const arma::vec& coeff, const double tau, const int n, const double h, const double z);
-RcppExport SEXP _conquer2adaptive_asymptoticCI(SEXP XSEXP, SEXP resSEXP, SEXP coeffSEXP, SEXP tauSEXP, SEXP nSEXP, SEXP hSEXP, SEXP zSEXP) {
+RcppExport SEXP _conquer2_asymptoticCI(SEXP XSEXP, SEXP resSEXP, SEXP coeffSEXP, SEXP tauSEXP, SEXP nSEXP, SEXP hSEXP, SEXP zSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -5339,261 +5339,261 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_conquer2adaptive_sgn", (DL_FUNC) &_conquer2adaptive_sgn, 1},
-    {"_conquer2adaptive_mad", (DL_FUNC) &_conquer2adaptive_mad, 1},
-    {"_conquer2adaptive_standardize", (DL_FUNC) &_conquer2adaptive_standardize, 4},
-    {"_conquer2adaptive_softThresh", (DL_FUNC) &_conquer2adaptive_softThresh, 3},
-    {"_conquer2adaptive_lossQr", (DL_FUNC) &_conquer2adaptive_lossQr, 7},
-    {"_conquer2adaptive_cmptLambdaLasso", (DL_FUNC) &_conquer2adaptive_cmptLambdaLasso, 2},
-    {"_conquer2adaptive_lossL2", (DL_FUNC) &_conquer2adaptive_lossL2, 5},
-    {"_conquer2adaptive_updateL2", (DL_FUNC) &_conquer2adaptive_updateL2, 6},
-    {"_conquer2adaptive_lammL2", (DL_FUNC) &_conquer2adaptive_lammL2, 9},
-    {"_conquer2adaptive_lasso", (DL_FUNC) &_conquer2adaptive_lasso, 10},
-    {"_conquer2adaptive_cmptLambdaSCAD", (DL_FUNC) &_conquer2adaptive_cmptLambdaSCAD, 4},
-    {"_conquer2adaptive_cmptLambdaMCP", (DL_FUNC) &_conquer2adaptive_cmptLambdaMCP, 4},
-    {"_conquer2adaptive_lossGaussHd", (DL_FUNC) &_conquer2adaptive_lossGaussHd, 7},
-    {"_conquer2adaptive_updateGaussHd", (DL_FUNC) &_conquer2adaptive_updateGaussHd, 9},
-    {"_conquer2adaptive_lammGaussLasso", (DL_FUNC) &_conquer2adaptive_lammGaussLasso, 12},
-    {"_conquer2adaptive_lammGaussElastic", (DL_FUNC) &_conquer2adaptive_lammGaussElastic, 13},
-    {"_conquer2adaptive_lammGaussGroupLasso", (DL_FUNC) &_conquer2adaptive_lammGaussGroupLasso, 15},
-    {"_conquer2adaptive_lammGaussSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_lammGaussSparseGroupLasso, 16},
-    {"_conquer2adaptive_gaussLasso", (DL_FUNC) &_conquer2adaptive_gaussLasso, 13},
-    {"_conquer2adaptive_gaussLassoWarm", (DL_FUNC) &_conquer2adaptive_gaussLassoWarm, 14},
-    {"_conquer2adaptive_gaussElastic", (DL_FUNC) &_conquer2adaptive_gaussElastic, 14},
-    {"_conquer2adaptive_gaussElasticWarm", (DL_FUNC) &_conquer2adaptive_gaussElasticWarm, 15},
-    {"_conquer2adaptive_gaussGroupLasso", (DL_FUNC) &_conquer2adaptive_gaussGroupLasso, 16},
-    {"_conquer2adaptive_gaussGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_gaussGroupLassoWarm, 17},
-    {"_conquer2adaptive_gaussSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_gaussSparseGroupLasso, 16},
-    {"_conquer2adaptive_gaussSparseGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_gaussSparseGroupLassoWarm, 17},
-    {"_conquer2adaptive_gaussScad", (DL_FUNC) &_conquer2adaptive_gaussScad, 15},
-    {"_conquer2adaptive_gaussScadWarm", (DL_FUNC) &_conquer2adaptive_gaussScadWarm, 15},
-    {"_conquer2adaptive_gaussMcp", (DL_FUNC) &_conquer2adaptive_gaussMcp, 15},
-    {"_conquer2adaptive_gaussMcpWarm", (DL_FUNC) &_conquer2adaptive_gaussMcpWarm, 15},
-    {"_conquer2adaptive_conquerGaussLasso", (DL_FUNC) &_conquer2adaptive_conquerGaussLasso, 9},
-    {"_conquer2adaptive_conquerGaussLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerGaussLassoSeq, 9},
-    {"_conquer2adaptive_conquerGaussElastic", (DL_FUNC) &_conquer2adaptive_conquerGaussElastic, 10},
-    {"_conquer2adaptive_conquerGaussElasticSeq", (DL_FUNC) &_conquer2adaptive_conquerGaussElasticSeq, 10},
-    {"_conquer2adaptive_conquerGaussGroupLasso", (DL_FUNC) &_conquer2adaptive_conquerGaussGroupLasso, 12},
-    {"_conquer2adaptive_conquerGaussGroupLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerGaussGroupLassoSeq, 12},
-    {"_conquer2adaptive_conquerGaussSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_conquerGaussSparseGroupLasso, 12},
-    {"_conquer2adaptive_conquerGaussSparseGroupLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerGaussSparseGroupLassoSeq, 12},
-    {"_conquer2adaptive_conquerGaussScad", (DL_FUNC) &_conquer2adaptive_conquerGaussScad, 11},
-    {"_conquer2adaptive_conquerGaussScadSeq", (DL_FUNC) &_conquer2adaptive_conquerGaussScadSeq, 11},
-    {"_conquer2adaptive_conquerGaussMcp", (DL_FUNC) &_conquer2adaptive_conquerGaussMcp, 11},
-    {"_conquer2adaptive_conquerGaussMcpSeq", (DL_FUNC) &_conquer2adaptive_conquerGaussMcpSeq, 11},
-    {"_conquer2adaptive_cvGaussLassoWarm", (DL_FUNC) &_conquer2adaptive_cvGaussLassoWarm, 11},
-    {"_conquer2adaptive_cvGaussElasticWarm", (DL_FUNC) &_conquer2adaptive_cvGaussElasticWarm, 12},
-    {"_conquer2adaptive_cvGaussGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_cvGaussGroupLassoWarm, 14},
-    {"_conquer2adaptive_cvGaussSparseGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_cvGaussSparseGroupLassoWarm, 14},
-    {"_conquer2adaptive_cvGaussScadWarm", (DL_FUNC) &_conquer2adaptive_cvGaussScadWarm, 13},
-    {"_conquer2adaptive_cvGaussMcpWarm", (DL_FUNC) &_conquer2adaptive_cvGaussMcpWarm, 13},
-    {"_conquer2adaptive_lossLogisticHd", (DL_FUNC) &_conquer2adaptive_lossLogisticHd, 6},
-    {"_conquer2adaptive_updateLogisticHd", (DL_FUNC) &_conquer2adaptive_updateLogisticHd, 8},
-    {"_conquer2adaptive_lammLogisticLasso", (DL_FUNC) &_conquer2adaptive_lammLogisticLasso, 11},
-    {"_conquer2adaptive_lammLogisticElastic", (DL_FUNC) &_conquer2adaptive_lammLogisticElastic, 12},
-    {"_conquer2adaptive_lammLogisticGroupLasso", (DL_FUNC) &_conquer2adaptive_lammLogisticGroupLasso, 14},
-    {"_conquer2adaptive_lammLogisticSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_lammLogisticSparseGroupLasso, 15},
-    {"_conquer2adaptive_logisticLasso", (DL_FUNC) &_conquer2adaptive_logisticLasso, 12},
-    {"_conquer2adaptive_logisticLassoWarm", (DL_FUNC) &_conquer2adaptive_logisticLassoWarm, 13},
-    {"_conquer2adaptive_logisticElastic", (DL_FUNC) &_conquer2adaptive_logisticElastic, 13},
-    {"_conquer2adaptive_logisticElasticWarm", (DL_FUNC) &_conquer2adaptive_logisticElasticWarm, 14},
-    {"_conquer2adaptive_logisticGroupLasso", (DL_FUNC) &_conquer2adaptive_logisticGroupLasso, 15},
-    {"_conquer2adaptive_logisticGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_logisticGroupLassoWarm, 16},
-    {"_conquer2adaptive_logisticSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_logisticSparseGroupLasso, 15},
-    {"_conquer2adaptive_logisticSparseGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_logisticSparseGroupLassoWarm, 16},
-    {"_conquer2adaptive_logisticScad", (DL_FUNC) &_conquer2adaptive_logisticScad, 14},
-    {"_conquer2adaptive_logisticScadWarm", (DL_FUNC) &_conquer2adaptive_logisticScadWarm, 14},
-    {"_conquer2adaptive_logisticMcp", (DL_FUNC) &_conquer2adaptive_logisticMcp, 14},
-    {"_conquer2adaptive_logisticMcpWarm", (DL_FUNC) &_conquer2adaptive_logisticMcpWarm, 14},
-    {"_conquer2adaptive_conquerLogisticLasso", (DL_FUNC) &_conquer2adaptive_conquerLogisticLasso, 9},
-    {"_conquer2adaptive_conquerLogisticLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerLogisticLassoSeq, 9},
-    {"_conquer2adaptive_conquerLogisticElastic", (DL_FUNC) &_conquer2adaptive_conquerLogisticElastic, 10},
-    {"_conquer2adaptive_conquerLogisticElasticSeq", (DL_FUNC) &_conquer2adaptive_conquerLogisticElasticSeq, 10},
-    {"_conquer2adaptive_conquerLogisticGroupLasso", (DL_FUNC) &_conquer2adaptive_conquerLogisticGroupLasso, 12},
-    {"_conquer2adaptive_conquerLogisticGroupLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerLogisticGroupLassoSeq, 12},
-    {"_conquer2adaptive_conquerLogisticSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_conquerLogisticSparseGroupLasso, 12},
-    {"_conquer2adaptive_conquerLogisticSparseGroupLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerLogisticSparseGroupLassoSeq, 12},
-    {"_conquer2adaptive_conquerLogisticScad", (DL_FUNC) &_conquer2adaptive_conquerLogisticScad, 11},
-    {"_conquer2adaptive_conquerLogisticScadSeq", (DL_FUNC) &_conquer2adaptive_conquerLogisticScadSeq, 11},
-    {"_conquer2adaptive_conquerLogisticMcp", (DL_FUNC) &_conquer2adaptive_conquerLogisticMcp, 11},
-    {"_conquer2adaptive_conquerLogisticMcpSeq", (DL_FUNC) &_conquer2adaptive_conquerLogisticMcpSeq, 11},
-    {"_conquer2adaptive_cvLogisticLassoWarm", (DL_FUNC) &_conquer2adaptive_cvLogisticLassoWarm, 11},
-    {"_conquer2adaptive_cvLogisticElasticWarm", (DL_FUNC) &_conquer2adaptive_cvLogisticElasticWarm, 12},
-    {"_conquer2adaptive_cvLogisticGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_cvLogisticGroupLassoWarm, 14},
-    {"_conquer2adaptive_cvLogisticSparseGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_cvLogisticSparseGroupLassoWarm, 14},
-    {"_conquer2adaptive_cvLogisticScadWarm", (DL_FUNC) &_conquer2adaptive_cvLogisticScadWarm, 13},
-    {"_conquer2adaptive_cvLogisticMcpWarm", (DL_FUNC) &_conquer2adaptive_cvLogisticMcpWarm, 13},
-    {"_conquer2adaptive_lossParaHd", (DL_FUNC) &_conquer2adaptive_lossParaHd, 7},
-    {"_conquer2adaptive_updateParaHd", (DL_FUNC) &_conquer2adaptive_updateParaHd, 9},
-    {"_conquer2adaptive_lammParaLasso", (DL_FUNC) &_conquer2adaptive_lammParaLasso, 12},
-    {"_conquer2adaptive_lammParaElastic", (DL_FUNC) &_conquer2adaptive_lammParaElastic, 13},
-    {"_conquer2adaptive_lammParaGroupLasso", (DL_FUNC) &_conquer2adaptive_lammParaGroupLasso, 15},
-    {"_conquer2adaptive_lammParaSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_lammParaSparseGroupLasso, 16},
-    {"_conquer2adaptive_paraLasso", (DL_FUNC) &_conquer2adaptive_paraLasso, 13},
-    {"_conquer2adaptive_paraLassoWarm", (DL_FUNC) &_conquer2adaptive_paraLassoWarm, 14},
-    {"_conquer2adaptive_paraElastic", (DL_FUNC) &_conquer2adaptive_paraElastic, 14},
-    {"_conquer2adaptive_paraElasticWarm", (DL_FUNC) &_conquer2adaptive_paraElasticWarm, 15},
-    {"_conquer2adaptive_paraGroupLasso", (DL_FUNC) &_conquer2adaptive_paraGroupLasso, 16},
-    {"_conquer2adaptive_paraGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_paraGroupLassoWarm, 17},
-    {"_conquer2adaptive_paraSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_paraSparseGroupLasso, 16},
-    {"_conquer2adaptive_paraSparseGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_paraSparseGroupLassoWarm, 17},
-    {"_conquer2adaptive_paraScad", (DL_FUNC) &_conquer2adaptive_paraScad, 15},
-    {"_conquer2adaptive_paraScadWarm", (DL_FUNC) &_conquer2adaptive_paraScadWarm, 15},
-    {"_conquer2adaptive_paraMcp", (DL_FUNC) &_conquer2adaptive_paraMcp, 15},
-    {"_conquer2adaptive_paraMcpWarm", (DL_FUNC) &_conquer2adaptive_paraMcpWarm, 15},
-    {"_conquer2adaptive_conquerParaLasso", (DL_FUNC) &_conquer2adaptive_conquerParaLasso, 9},
-    {"_conquer2adaptive_conquerParaLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerParaLassoSeq, 9},
-    {"_conquer2adaptive_conquerParaElastic", (DL_FUNC) &_conquer2adaptive_conquerParaElastic, 10},
-    {"_conquer2adaptive_conquerParaElasticSeq", (DL_FUNC) &_conquer2adaptive_conquerParaElasticSeq, 10},
-    {"_conquer2adaptive_conquerParaGroupLasso", (DL_FUNC) &_conquer2adaptive_conquerParaGroupLasso, 12},
-    {"_conquer2adaptive_conquerParaGroupLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerParaGroupLassoSeq, 12},
-    {"_conquer2adaptive_conquerParaSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_conquerParaSparseGroupLasso, 12},
-    {"_conquer2adaptive_conquerParaSparseGroupLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerParaSparseGroupLassoSeq, 12},
-    {"_conquer2adaptive_conquerParaScad", (DL_FUNC) &_conquer2adaptive_conquerParaScad, 11},
-    {"_conquer2adaptive_conquerParaScadSeq", (DL_FUNC) &_conquer2adaptive_conquerParaScadSeq, 11},
-    {"_conquer2adaptive_conquerParaMcp", (DL_FUNC) &_conquer2adaptive_conquerParaMcp, 11},
-    {"_conquer2adaptive_conquerParaMcpSeq", (DL_FUNC) &_conquer2adaptive_conquerParaMcpSeq, 11},
-    {"_conquer2adaptive_cvParaLassoWarm", (DL_FUNC) &_conquer2adaptive_cvParaLassoWarm, 11},
-    {"_conquer2adaptive_cvParaElasticWarm", (DL_FUNC) &_conquer2adaptive_cvParaElasticWarm, 12},
-    {"_conquer2adaptive_cvParaGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_cvParaGroupLassoWarm, 14},
-    {"_conquer2adaptive_cvParaSparseGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_cvParaSparseGroupLassoWarm, 14},
-    {"_conquer2adaptive_cvParaScadWarm", (DL_FUNC) &_conquer2adaptive_cvParaScadWarm, 13},
-    {"_conquer2adaptive_cvParaMcpWarm", (DL_FUNC) &_conquer2adaptive_cvParaMcpWarm, 13},
-    {"_conquer2adaptive_lossTrianHd", (DL_FUNC) &_conquer2adaptive_lossTrianHd, 7},
-    {"_conquer2adaptive_updateTrianHd", (DL_FUNC) &_conquer2adaptive_updateTrianHd, 9},
-    {"_conquer2adaptive_lammTrianLasso", (DL_FUNC) &_conquer2adaptive_lammTrianLasso, 12},
-    {"_conquer2adaptive_lammTrianElastic", (DL_FUNC) &_conquer2adaptive_lammTrianElastic, 13},
-    {"_conquer2adaptive_lammTrianGroupLasso", (DL_FUNC) &_conquer2adaptive_lammTrianGroupLasso, 15},
-    {"_conquer2adaptive_lammTrianSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_lammTrianSparseGroupLasso, 16},
-    {"_conquer2adaptive_trianLasso", (DL_FUNC) &_conquer2adaptive_trianLasso, 13},
-    {"_conquer2adaptive_trianLassoWarm", (DL_FUNC) &_conquer2adaptive_trianLassoWarm, 14},
-    {"_conquer2adaptive_trianElastic", (DL_FUNC) &_conquer2adaptive_trianElastic, 14},
-    {"_conquer2adaptive_trianElasticWarm", (DL_FUNC) &_conquer2adaptive_trianElasticWarm, 15},
-    {"_conquer2adaptive_trianGroupLasso", (DL_FUNC) &_conquer2adaptive_trianGroupLasso, 16},
-    {"_conquer2adaptive_trianGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_trianGroupLassoWarm, 17},
-    {"_conquer2adaptive_trianSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_trianSparseGroupLasso, 16},
-    {"_conquer2adaptive_trianSparseGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_trianSparseGroupLassoWarm, 17},
-    {"_conquer2adaptive_trianScad", (DL_FUNC) &_conquer2adaptive_trianScad, 15},
-    {"_conquer2adaptive_trianScadWarm", (DL_FUNC) &_conquer2adaptive_trianScadWarm, 15},
-    {"_conquer2adaptive_trianMcp", (DL_FUNC) &_conquer2adaptive_trianMcp, 15},
-    {"_conquer2adaptive_trianMcpWarm", (DL_FUNC) &_conquer2adaptive_trianMcpWarm, 15},
-    {"_conquer2adaptive_conquerTrianLasso", (DL_FUNC) &_conquer2adaptive_conquerTrianLasso, 9},
-    {"_conquer2adaptive_conquerTrianLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerTrianLassoSeq, 9},
-    {"_conquer2adaptive_conquerTrianElastic", (DL_FUNC) &_conquer2adaptive_conquerTrianElastic, 10},
-    {"_conquer2adaptive_conquerTrianElasticSeq", (DL_FUNC) &_conquer2adaptive_conquerTrianElasticSeq, 10},
-    {"_conquer2adaptive_conquerTrianGroupLasso", (DL_FUNC) &_conquer2adaptive_conquerTrianGroupLasso, 12},
-    {"_conquer2adaptive_conquerTrianGroupLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerTrianGroupLassoSeq, 12},
-    {"_conquer2adaptive_conquerTrianSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_conquerTrianSparseGroupLasso, 12},
-    {"_conquer2adaptive_conquerTrianSparseGroupLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerTrianSparseGroupLassoSeq, 12},
-    {"_conquer2adaptive_conquerTrianScad", (DL_FUNC) &_conquer2adaptive_conquerTrianScad, 11},
-    {"_conquer2adaptive_conquerTrianScadSeq", (DL_FUNC) &_conquer2adaptive_conquerTrianScadSeq, 11},
-    {"_conquer2adaptive_conquerTrianMcp", (DL_FUNC) &_conquer2adaptive_conquerTrianMcp, 11},
-    {"_conquer2adaptive_conquerTrianMcpSeq", (DL_FUNC) &_conquer2adaptive_conquerTrianMcpSeq, 11},
-    {"_conquer2adaptive_cvTrianLassoWarm", (DL_FUNC) &_conquer2adaptive_cvTrianLassoWarm, 11},
-    {"_conquer2adaptive_cvTrianElasticWarm", (DL_FUNC) &_conquer2adaptive_cvTrianElasticWarm, 12},
-    {"_conquer2adaptive_cvTrianGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_cvTrianGroupLassoWarm, 14},
-    {"_conquer2adaptive_cvTrianSparseGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_cvTrianSparseGroupLassoWarm, 14},
-    {"_conquer2adaptive_cvTrianScadWarm", (DL_FUNC) &_conquer2adaptive_cvTrianScadWarm, 13},
-    {"_conquer2adaptive_cvTrianMcpWarm", (DL_FUNC) &_conquer2adaptive_cvTrianMcpWarm, 13},
-    {"_conquer2adaptive_lossUnifHd", (DL_FUNC) &_conquer2adaptive_lossUnifHd, 6},
-    {"_conquer2adaptive_updateUnifHd", (DL_FUNC) &_conquer2adaptive_updateUnifHd, 8},
-    {"_conquer2adaptive_lammUnifLasso", (DL_FUNC) &_conquer2adaptive_lammUnifLasso, 11},
-    {"_conquer2adaptive_lammUnifElastic", (DL_FUNC) &_conquer2adaptive_lammUnifElastic, 12},
-    {"_conquer2adaptive_lammUnifGroupLasso", (DL_FUNC) &_conquer2adaptive_lammUnifGroupLasso, 14},
-    {"_conquer2adaptive_lammUnifSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_lammUnifSparseGroupLasso, 15},
-    {"_conquer2adaptive_unifLasso", (DL_FUNC) &_conquer2adaptive_unifLasso, 12},
-    {"_conquer2adaptive_unifLassoWarm", (DL_FUNC) &_conquer2adaptive_unifLassoWarm, 13},
-    {"_conquer2adaptive_unifElastic", (DL_FUNC) &_conquer2adaptive_unifElastic, 13},
-    {"_conquer2adaptive_unifElasticWarm", (DL_FUNC) &_conquer2adaptive_unifElasticWarm, 14},
-    {"_conquer2adaptive_unifGroupLasso", (DL_FUNC) &_conquer2adaptive_unifGroupLasso, 15},
-    {"_conquer2adaptive_unifGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_unifGroupLassoWarm, 16},
-    {"_conquer2adaptive_unifSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_unifSparseGroupLasso, 15},
-    {"_conquer2adaptive_unifSparseGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_unifSparseGroupLassoWarm, 16},
-    {"_conquer2adaptive_unifScad", (DL_FUNC) &_conquer2adaptive_unifScad, 14},
-    {"_conquer2adaptive_unifScadWarm", (DL_FUNC) &_conquer2adaptive_unifScadWarm, 14},
-    {"_conquer2adaptive_unifMcp", (DL_FUNC) &_conquer2adaptive_unifMcp, 14},
-    {"_conquer2adaptive_unifMcpWarm", (DL_FUNC) &_conquer2adaptive_unifMcpWarm, 14},
-    {"_conquer2adaptive_conquerUnifLasso", (DL_FUNC) &_conquer2adaptive_conquerUnifLasso, 9},
-    {"_conquer2adaptive_conquerUnifLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerUnifLassoSeq, 9},
-    {"_conquer2adaptive_conquerUnifElastic", (DL_FUNC) &_conquer2adaptive_conquerUnifElastic, 10},
-    {"_conquer2adaptive_conquerUnifElasticSeq", (DL_FUNC) &_conquer2adaptive_conquerUnifElasticSeq, 10},
-    {"_conquer2adaptive_conquerUnifGroupLasso", (DL_FUNC) &_conquer2adaptive_conquerUnifGroupLasso, 12},
-    {"_conquer2adaptive_conquerUnifGroupLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerUnifGroupLassoSeq, 12},
-    {"_conquer2adaptive_conquerUnifSparseGroupLasso", (DL_FUNC) &_conquer2adaptive_conquerUnifSparseGroupLasso, 12},
-    {"_conquer2adaptive_conquerUnifSparseGroupLassoSeq", (DL_FUNC) &_conquer2adaptive_conquerUnifSparseGroupLassoSeq, 12},
-    {"_conquer2adaptive_conquerUnifScad", (DL_FUNC) &_conquer2adaptive_conquerUnifScad, 11},
-    {"_conquer2adaptive_conquerUnifScadSeq", (DL_FUNC) &_conquer2adaptive_conquerUnifScadSeq, 11},
-    {"_conquer2adaptive_conquerUnifMcp", (DL_FUNC) &_conquer2adaptive_conquerUnifMcp, 11},
-    {"_conquer2adaptive_conquerUnifMcpSeq", (DL_FUNC) &_conquer2adaptive_conquerUnifMcpSeq, 11},
-    {"_conquer2adaptive_cvUnifLassoWarm", (DL_FUNC) &_conquer2adaptive_cvUnifLassoWarm, 11},
-    {"_conquer2adaptive_cvUnifElasticWarm", (DL_FUNC) &_conquer2adaptive_cvUnifElasticWarm, 12},
-    {"_conquer2adaptive_cvUnifGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_cvUnifGroupLassoWarm, 14},
-    {"_conquer2adaptive_cvUnifSparseGroupLassoWarm", (DL_FUNC) &_conquer2adaptive_cvUnifSparseGroupLassoWarm, 14},
-    {"_conquer2adaptive_cvUnifScadWarm", (DL_FUNC) &_conquer2adaptive_cvUnifScadWarm, 13},
-    {"_conquer2adaptive_cvUnifMcpWarm", (DL_FUNC) &_conquer2adaptive_cvUnifMcpWarm, 13},
-    {"_conquer2adaptive_updateHuber", (DL_FUNC) &_conquer2adaptive_updateHuber, 8},
-    {"_conquer2adaptive_updateGauss", (DL_FUNC) &_conquer2adaptive_updateGauss, 7},
-    {"_conquer2adaptive_updateLogistic", (DL_FUNC) &_conquer2adaptive_updateLogistic, 7},
-    {"_conquer2adaptive_updateUnif", (DL_FUNC) &_conquer2adaptive_updateUnif, 9},
-    {"_conquer2adaptive_updatePara", (DL_FUNC) &_conquer2adaptive_updatePara, 10},
-    {"_conquer2adaptive_updateTrian", (DL_FUNC) &_conquer2adaptive_updateTrian, 10},
-    {"_conquer2adaptive_huberReg", (DL_FUNC) &_conquer2adaptive_huberReg, 13},
-    {"_conquer2adaptive_smqrGauss", (DL_FUNC) &_conquer2adaptive_smqrGauss, 8},
-    {"_conquer2adaptive_smqrGaussNsd", (DL_FUNC) &_conquer2adaptive_smqrGaussNsd, 8},
-    {"_conquer2adaptive_smqrGaussIni", (DL_FUNC) &_conquer2adaptive_smqrGaussIni, 9},
-    {"_conquer2adaptive_smqrLogistic", (DL_FUNC) &_conquer2adaptive_smqrLogistic, 8},
-    {"_conquer2adaptive_smqrLogisticNsd", (DL_FUNC) &_conquer2adaptive_smqrLogisticNsd, 8},
-    {"_conquer2adaptive_smqrLogisticIni", (DL_FUNC) &_conquer2adaptive_smqrLogisticIni, 9},
-    {"_conquer2adaptive_smqrUnif", (DL_FUNC) &_conquer2adaptive_smqrUnif, 8},
-    {"_conquer2adaptive_smqrUnifNsd", (DL_FUNC) &_conquer2adaptive_smqrUnifNsd, 8},
-    {"_conquer2adaptive_smqrUnifIni", (DL_FUNC) &_conquer2adaptive_smqrUnifIni, 9},
-    {"_conquer2adaptive_smqrPara", (DL_FUNC) &_conquer2adaptive_smqrPara, 8},
-    {"_conquer2adaptive_smqrParaNsd", (DL_FUNC) &_conquer2adaptive_smqrParaNsd, 8},
-    {"_conquer2adaptive_smqrParaIni", (DL_FUNC) &_conquer2adaptive_smqrParaIni, 9},
-    {"_conquer2adaptive_smqrTrian", (DL_FUNC) &_conquer2adaptive_smqrTrian, 8},
-    {"_conquer2adaptive_smqrTrianNsd", (DL_FUNC) &_conquer2adaptive_smqrTrianNsd, 8},
-    {"_conquer2adaptive_smqrTrianIni", (DL_FUNC) &_conquer2adaptive_smqrTrianIni, 9},
-    {"_conquer2adaptive_smqrGaussProc", (DL_FUNC) &_conquer2adaptive_smqrGaussProc, 8},
-    {"_conquer2adaptive_smqrLogisticProc", (DL_FUNC) &_conquer2adaptive_smqrLogisticProc, 8},
-    {"_conquer2adaptive_smqrUnifProc", (DL_FUNC) &_conquer2adaptive_smqrUnifProc, 8},
-    {"_conquer2adaptive_smqrParaProc", (DL_FUNC) &_conquer2adaptive_smqrParaProc, 8},
-    {"_conquer2adaptive_smqrTrianProc", (DL_FUNC) &_conquer2adaptive_smqrTrianProc, 8},
-    {"_conquer2adaptive_smqrGaussInf", (DL_FUNC) &_conquer2adaptive_smqrGaussInf, 11},
-    {"_conquer2adaptive_smqrLogisticInf", (DL_FUNC) &_conquer2adaptive_smqrLogisticInf, 11},
-    {"_conquer2adaptive_smqrUnifInf", (DL_FUNC) &_conquer2adaptive_smqrUnifInf, 11},
-    {"_conquer2adaptive_smqrParaInf", (DL_FUNC) &_conquer2adaptive_smqrParaInf, 11},
-    {"_conquer2adaptive_smqrTrianInf", (DL_FUNC) &_conquer2adaptive_smqrTrianInf, 11},
-    {"_conquer2adaptive_huberRegUbd", (DL_FUNC) &_conquer2adaptive_huberRegUbd, 12},
-    {"_conquer2adaptive_smqrGaussUbd", (DL_FUNC) &_conquer2adaptive_smqrGaussUbd, 7},
-    {"_conquer2adaptive_smqrGaussNsdUbd", (DL_FUNC) &_conquer2adaptive_smqrGaussNsdUbd, 7},
-    {"_conquer2adaptive_smqrGaussIniUbd", (DL_FUNC) &_conquer2adaptive_smqrGaussIniUbd, 8},
-    {"_conquer2adaptive_smqrLogisticUbd", (DL_FUNC) &_conquer2adaptive_smqrLogisticUbd, 7},
-    {"_conquer2adaptive_smqrLogisticNsdUbd", (DL_FUNC) &_conquer2adaptive_smqrLogisticNsdUbd, 7},
-    {"_conquer2adaptive_smqrLogisticIniUbd", (DL_FUNC) &_conquer2adaptive_smqrLogisticIniUbd, 8},
-    {"_conquer2adaptive_smqrUnifUbd", (DL_FUNC) &_conquer2adaptive_smqrUnifUbd, 7},
-    {"_conquer2adaptive_smqrUnifNsdUbd", (DL_FUNC) &_conquer2adaptive_smqrUnifNsdUbd, 7},
-    {"_conquer2adaptive_smqrUnifIniUbd", (DL_FUNC) &_conquer2adaptive_smqrUnifIniUbd, 8},
-    {"_conquer2adaptive_smqrParaUbd", (DL_FUNC) &_conquer2adaptive_smqrParaUbd, 7},
-    {"_conquer2adaptive_smqrParaNsdUbd", (DL_FUNC) &_conquer2adaptive_smqrParaNsdUbd, 7},
-    {"_conquer2adaptive_smqrParaIniUbd", (DL_FUNC) &_conquer2adaptive_smqrParaIniUbd, 8},
-    {"_conquer2adaptive_smqrTrianUbd", (DL_FUNC) &_conquer2adaptive_smqrTrianUbd, 7},
-    {"_conquer2adaptive_smqrTrianNsdUbd", (DL_FUNC) &_conquer2adaptive_smqrTrianNsdUbd, 7},
-    {"_conquer2adaptive_smqrTrianIniUbd", (DL_FUNC) &_conquer2adaptive_smqrTrianIniUbd, 8},
-    {"_conquer2adaptive_smqrGaussProcUbd", (DL_FUNC) &_conquer2adaptive_smqrGaussProcUbd, 7},
-    {"_conquer2adaptive_smqrLogisticProcUbd", (DL_FUNC) &_conquer2adaptive_smqrLogisticProcUbd, 7},
-    {"_conquer2adaptive_smqrUnifProcUbd", (DL_FUNC) &_conquer2adaptive_smqrUnifProcUbd, 7},
-    {"_conquer2adaptive_smqrParaProcUbd", (DL_FUNC) &_conquer2adaptive_smqrParaProcUbd, 7},
-    {"_conquer2adaptive_smqrTrianProcUbd", (DL_FUNC) &_conquer2adaptive_smqrTrianProcUbd, 7},
-    {"_conquer2adaptive_smqrGaussInfUbd", (DL_FUNC) &_conquer2adaptive_smqrGaussInfUbd, 10},
-    {"_conquer2adaptive_smqrLogisticInfUbd", (DL_FUNC) &_conquer2adaptive_smqrLogisticInfUbd, 10},
-    {"_conquer2adaptive_smqrUnifInfUbd", (DL_FUNC) &_conquer2adaptive_smqrUnifInfUbd, 10},
-    {"_conquer2adaptive_smqrParaInfUbd", (DL_FUNC) &_conquer2adaptive_smqrParaInfUbd, 10},
-    {"_conquer2adaptive_smqrTrianInfUbd", (DL_FUNC) &_conquer2adaptive_smqrTrianInfUbd, 10},
-    {"_conquer2adaptive_asymptoticCI", (DL_FUNC) &_conquer2adaptive_asymptoticCI, 7},
+    {"_conquer2_sgn", (DL_FUNC) &_conquer2_sgn, 1},
+    {"_conquer2_mad", (DL_FUNC) &_conquer2_mad, 1},
+    {"_conquer2_standardize", (DL_FUNC) &_conquer2_standardize, 4},
+    {"_conquer2_softThresh", (DL_FUNC) &_conquer2_softThresh, 3},
+    {"_conquer2_lossQr", (DL_FUNC) &_conquer2_lossQr, 7},
+    {"_conquer2_cmptLambdaLasso", (DL_FUNC) &_conquer2_cmptLambdaLasso, 2},
+    {"_conquer2_lossL2", (DL_FUNC) &_conquer2_lossL2, 5},
+    {"_conquer2_updateL2", (DL_FUNC) &_conquer2_updateL2, 6},
+    {"_conquer2_lammL2", (DL_FUNC) &_conquer2_lammL2, 9},
+    {"_conquer2_lasso", (DL_FUNC) &_conquer2_lasso, 10},
+    {"_conquer2_cmptLambdaSCAD", (DL_FUNC) &_conquer2_cmptLambdaSCAD, 4},
+    {"_conquer2_cmptLambdaMCP", (DL_FUNC) &_conquer2_cmptLambdaMCP, 4},
+    {"_conquer2_lossGaussHd", (DL_FUNC) &_conquer2_lossGaussHd, 7},
+    {"_conquer2_updateGaussHd", (DL_FUNC) &_conquer2_updateGaussHd, 9},
+    {"_conquer2_lammGaussLasso", (DL_FUNC) &_conquer2_lammGaussLasso, 12},
+    {"_conquer2_lammGaussElastic", (DL_FUNC) &_conquer2_lammGaussElastic, 13},
+    {"_conquer2_lammGaussGroupLasso", (DL_FUNC) &_conquer2_lammGaussGroupLasso, 15},
+    {"_conquer2_lammGaussSparseGroupLasso", (DL_FUNC) &_conquer2_lammGaussSparseGroupLasso, 16},
+    {"_conquer2_gaussLasso", (DL_FUNC) &_conquer2_gaussLasso, 13},
+    {"_conquer2_gaussLassoWarm", (DL_FUNC) &_conquer2_gaussLassoWarm, 14},
+    {"_conquer2_gaussElastic", (DL_FUNC) &_conquer2_gaussElastic, 14},
+    {"_conquer2_gaussElasticWarm", (DL_FUNC) &_conquer2_gaussElasticWarm, 15},
+    {"_conquer2_gaussGroupLasso", (DL_FUNC) &_conquer2_gaussGroupLasso, 16},
+    {"_conquer2_gaussGroupLassoWarm", (DL_FUNC) &_conquer2_gaussGroupLassoWarm, 17},
+    {"_conquer2_gaussSparseGroupLasso", (DL_FUNC) &_conquer2_gaussSparseGroupLasso, 16},
+    {"_conquer2_gaussSparseGroupLassoWarm", (DL_FUNC) &_conquer2_gaussSparseGroupLassoWarm, 17},
+    {"_conquer2_gaussScad", (DL_FUNC) &_conquer2_gaussScad, 15},
+    {"_conquer2_gaussScadWarm", (DL_FUNC) &_conquer2_gaussScadWarm, 15},
+    {"_conquer2_gaussMcp", (DL_FUNC) &_conquer2_gaussMcp, 15},
+    {"_conquer2_gaussMcpWarm", (DL_FUNC) &_conquer2_gaussMcpWarm, 15},
+    {"_conquer2_conquerGaussLasso", (DL_FUNC) &_conquer2_conquerGaussLasso, 9},
+    {"_conquer2_conquerGaussLassoSeq", (DL_FUNC) &_conquer2_conquerGaussLassoSeq, 9},
+    {"_conquer2_conquerGaussElastic", (DL_FUNC) &_conquer2_conquerGaussElastic, 10},
+    {"_conquer2_conquerGaussElasticSeq", (DL_FUNC) &_conquer2_conquerGaussElasticSeq, 10},
+    {"_conquer2_conquerGaussGroupLasso", (DL_FUNC) &_conquer2_conquerGaussGroupLasso, 12},
+    {"_conquer2_conquerGaussGroupLassoSeq", (DL_FUNC) &_conquer2_conquerGaussGroupLassoSeq, 12},
+    {"_conquer2_conquerGaussSparseGroupLasso", (DL_FUNC) &_conquer2_conquerGaussSparseGroupLasso, 12},
+    {"_conquer2_conquerGaussSparseGroupLassoSeq", (DL_FUNC) &_conquer2_conquerGaussSparseGroupLassoSeq, 12},
+    {"_conquer2_conquerGaussScad", (DL_FUNC) &_conquer2_conquerGaussScad, 11},
+    {"_conquer2_conquerGaussScadSeq", (DL_FUNC) &_conquer2_conquerGaussScadSeq, 11},
+    {"_conquer2_conquerGaussMcp", (DL_FUNC) &_conquer2_conquerGaussMcp, 11},
+    {"_conquer2_conquerGaussMcpSeq", (DL_FUNC) &_conquer2_conquerGaussMcpSeq, 11},
+    {"_conquer2_cvGaussLassoWarm", (DL_FUNC) &_conquer2_cvGaussLassoWarm, 11},
+    {"_conquer2_cvGaussElasticWarm", (DL_FUNC) &_conquer2_cvGaussElasticWarm, 12},
+    {"_conquer2_cvGaussGroupLassoWarm", (DL_FUNC) &_conquer2_cvGaussGroupLassoWarm, 14},
+    {"_conquer2_cvGaussSparseGroupLassoWarm", (DL_FUNC) &_conquer2_cvGaussSparseGroupLassoWarm, 14},
+    {"_conquer2_cvGaussScadWarm", (DL_FUNC) &_conquer2_cvGaussScadWarm, 13},
+    {"_conquer2_cvGaussMcpWarm", (DL_FUNC) &_conquer2_cvGaussMcpWarm, 13},
+    {"_conquer2_lossLogisticHd", (DL_FUNC) &_conquer2_lossLogisticHd, 6},
+    {"_conquer2_updateLogisticHd", (DL_FUNC) &_conquer2_updateLogisticHd, 8},
+    {"_conquer2_lammLogisticLasso", (DL_FUNC) &_conquer2_lammLogisticLasso, 11},
+    {"_conquer2_lammLogisticElastic", (DL_FUNC) &_conquer2_lammLogisticElastic, 12},
+    {"_conquer2_lammLogisticGroupLasso", (DL_FUNC) &_conquer2_lammLogisticGroupLasso, 14},
+    {"_conquer2_lammLogisticSparseGroupLasso", (DL_FUNC) &_conquer2_lammLogisticSparseGroupLasso, 15},
+    {"_conquer2_logisticLasso", (DL_FUNC) &_conquer2_logisticLasso, 12},
+    {"_conquer2_logisticLassoWarm", (DL_FUNC) &_conquer2_logisticLassoWarm, 13},
+    {"_conquer2_logisticElastic", (DL_FUNC) &_conquer2_logisticElastic, 13},
+    {"_conquer2_logisticElasticWarm", (DL_FUNC) &_conquer2_logisticElasticWarm, 14},
+    {"_conquer2_logisticGroupLasso", (DL_FUNC) &_conquer2_logisticGroupLasso, 15},
+    {"_conquer2_logisticGroupLassoWarm", (DL_FUNC) &_conquer2_logisticGroupLassoWarm, 16},
+    {"_conquer2_logisticSparseGroupLasso", (DL_FUNC) &_conquer2_logisticSparseGroupLasso, 15},
+    {"_conquer2_logisticSparseGroupLassoWarm", (DL_FUNC) &_conquer2_logisticSparseGroupLassoWarm, 16},
+    {"_conquer2_logisticScad", (DL_FUNC) &_conquer2_logisticScad, 14},
+    {"_conquer2_logisticScadWarm", (DL_FUNC) &_conquer2_logisticScadWarm, 14},
+    {"_conquer2_logisticMcp", (DL_FUNC) &_conquer2_logisticMcp, 14},
+    {"_conquer2_logisticMcpWarm", (DL_FUNC) &_conquer2_logisticMcpWarm, 14},
+    {"_conquer2_conquerLogisticLasso", (DL_FUNC) &_conquer2_conquerLogisticLasso, 9},
+    {"_conquer2_conquerLogisticLassoSeq", (DL_FUNC) &_conquer2_conquerLogisticLassoSeq, 9},
+    {"_conquer2_conquerLogisticElastic", (DL_FUNC) &_conquer2_conquerLogisticElastic, 10},
+    {"_conquer2_conquerLogisticElasticSeq", (DL_FUNC) &_conquer2_conquerLogisticElasticSeq, 10},
+    {"_conquer2_conquerLogisticGroupLasso", (DL_FUNC) &_conquer2_conquerLogisticGroupLasso, 12},
+    {"_conquer2_conquerLogisticGroupLassoSeq", (DL_FUNC) &_conquer2_conquerLogisticGroupLassoSeq, 12},
+    {"_conquer2_conquerLogisticSparseGroupLasso", (DL_FUNC) &_conquer2_conquerLogisticSparseGroupLasso, 12},
+    {"_conquer2_conquerLogisticSparseGroupLassoSeq", (DL_FUNC) &_conquer2_conquerLogisticSparseGroupLassoSeq, 12},
+    {"_conquer2_conquerLogisticScad", (DL_FUNC) &_conquer2_conquerLogisticScad, 11},
+    {"_conquer2_conquerLogisticScadSeq", (DL_FUNC) &_conquer2_conquerLogisticScadSeq, 11},
+    {"_conquer2_conquerLogisticMcp", (DL_FUNC) &_conquer2_conquerLogisticMcp, 11},
+    {"_conquer2_conquerLogisticMcpSeq", (DL_FUNC) &_conquer2_conquerLogisticMcpSeq, 11},
+    {"_conquer2_cvLogisticLassoWarm", (DL_FUNC) &_conquer2_cvLogisticLassoWarm, 11},
+    {"_conquer2_cvLogisticElasticWarm", (DL_FUNC) &_conquer2_cvLogisticElasticWarm, 12},
+    {"_conquer2_cvLogisticGroupLassoWarm", (DL_FUNC) &_conquer2_cvLogisticGroupLassoWarm, 14},
+    {"_conquer2_cvLogisticSparseGroupLassoWarm", (DL_FUNC) &_conquer2_cvLogisticSparseGroupLassoWarm, 14},
+    {"_conquer2_cvLogisticScadWarm", (DL_FUNC) &_conquer2_cvLogisticScadWarm, 13},
+    {"_conquer2_cvLogisticMcpWarm", (DL_FUNC) &_conquer2_cvLogisticMcpWarm, 13},
+    {"_conquer2_lossParaHd", (DL_FUNC) &_conquer2_lossParaHd, 7},
+    {"_conquer2_updateParaHd", (DL_FUNC) &_conquer2_updateParaHd, 9},
+    {"_conquer2_lammParaLasso", (DL_FUNC) &_conquer2_lammParaLasso, 12},
+    {"_conquer2_lammParaElastic", (DL_FUNC) &_conquer2_lammParaElastic, 13},
+    {"_conquer2_lammParaGroupLasso", (DL_FUNC) &_conquer2_lammParaGroupLasso, 15},
+    {"_conquer2_lammParaSparseGroupLasso", (DL_FUNC) &_conquer2_lammParaSparseGroupLasso, 16},
+    {"_conquer2_paraLasso", (DL_FUNC) &_conquer2_paraLasso, 13},
+    {"_conquer2_paraLassoWarm", (DL_FUNC) &_conquer2_paraLassoWarm, 14},
+    {"_conquer2_paraElastic", (DL_FUNC) &_conquer2_paraElastic, 14},
+    {"_conquer2_paraElasticWarm", (DL_FUNC) &_conquer2_paraElasticWarm, 15},
+    {"_conquer2_paraGroupLasso", (DL_FUNC) &_conquer2_paraGroupLasso, 16},
+    {"_conquer2_paraGroupLassoWarm", (DL_FUNC) &_conquer2_paraGroupLassoWarm, 17},
+    {"_conquer2_paraSparseGroupLasso", (DL_FUNC) &_conquer2_paraSparseGroupLasso, 16},
+    {"_conquer2_paraSparseGroupLassoWarm", (DL_FUNC) &_conquer2_paraSparseGroupLassoWarm, 17},
+    {"_conquer2_paraScad", (DL_FUNC) &_conquer2_paraScad, 15},
+    {"_conquer2_paraScadWarm", (DL_FUNC) &_conquer2_paraScadWarm, 15},
+    {"_conquer2_paraMcp", (DL_FUNC) &_conquer2_paraMcp, 15},
+    {"_conquer2_paraMcpWarm", (DL_FUNC) &_conquer2_paraMcpWarm, 15},
+    {"_conquer2_conquerParaLasso", (DL_FUNC) &_conquer2_conquerParaLasso, 9},
+    {"_conquer2_conquerParaLassoSeq", (DL_FUNC) &_conquer2_conquerParaLassoSeq, 9},
+    {"_conquer2_conquerParaElastic", (DL_FUNC) &_conquer2_conquerParaElastic, 10},
+    {"_conquer2_conquerParaElasticSeq", (DL_FUNC) &_conquer2_conquerParaElasticSeq, 10},
+    {"_conquer2_conquerParaGroupLasso", (DL_FUNC) &_conquer2_conquerParaGroupLasso, 12},
+    {"_conquer2_conquerParaGroupLassoSeq", (DL_FUNC) &_conquer2_conquerParaGroupLassoSeq, 12},
+    {"_conquer2_conquerParaSparseGroupLasso", (DL_FUNC) &_conquer2_conquerParaSparseGroupLasso, 12},
+    {"_conquer2_conquerParaSparseGroupLassoSeq", (DL_FUNC) &_conquer2_conquerParaSparseGroupLassoSeq, 12},
+    {"_conquer2_conquerParaScad", (DL_FUNC) &_conquer2_conquerParaScad, 11},
+    {"_conquer2_conquerParaScadSeq", (DL_FUNC) &_conquer2_conquerParaScadSeq, 11},
+    {"_conquer2_conquerParaMcp", (DL_FUNC) &_conquer2_conquerParaMcp, 11},
+    {"_conquer2_conquerParaMcpSeq", (DL_FUNC) &_conquer2_conquerParaMcpSeq, 11},
+    {"_conquer2_cvParaLassoWarm", (DL_FUNC) &_conquer2_cvParaLassoWarm, 11},
+    {"_conquer2_cvParaElasticWarm", (DL_FUNC) &_conquer2_cvParaElasticWarm, 12},
+    {"_conquer2_cvParaGroupLassoWarm", (DL_FUNC) &_conquer2_cvParaGroupLassoWarm, 14},
+    {"_conquer2_cvParaSparseGroupLassoWarm", (DL_FUNC) &_conquer2_cvParaSparseGroupLassoWarm, 14},
+    {"_conquer2_cvParaScadWarm", (DL_FUNC) &_conquer2_cvParaScadWarm, 13},
+    {"_conquer2_cvParaMcpWarm", (DL_FUNC) &_conquer2_cvParaMcpWarm, 13},
+    {"_conquer2_lossTrianHd", (DL_FUNC) &_conquer2_lossTrianHd, 7},
+    {"_conquer2_updateTrianHd", (DL_FUNC) &_conquer2_updateTrianHd, 9},
+    {"_conquer2_lammTrianLasso", (DL_FUNC) &_conquer2_lammTrianLasso, 12},
+    {"_conquer2_lammTrianElastic", (DL_FUNC) &_conquer2_lammTrianElastic, 13},
+    {"_conquer2_lammTrianGroupLasso", (DL_FUNC) &_conquer2_lammTrianGroupLasso, 15},
+    {"_conquer2_lammTrianSparseGroupLasso", (DL_FUNC) &_conquer2_lammTrianSparseGroupLasso, 16},
+    {"_conquer2_trianLasso", (DL_FUNC) &_conquer2_trianLasso, 13},
+    {"_conquer2_trianLassoWarm", (DL_FUNC) &_conquer2_trianLassoWarm, 14},
+    {"_conquer2_trianElastic", (DL_FUNC) &_conquer2_trianElastic, 14},
+    {"_conquer2_trianElasticWarm", (DL_FUNC) &_conquer2_trianElasticWarm, 15},
+    {"_conquer2_trianGroupLasso", (DL_FUNC) &_conquer2_trianGroupLasso, 16},
+    {"_conquer2_trianGroupLassoWarm", (DL_FUNC) &_conquer2_trianGroupLassoWarm, 17},
+    {"_conquer2_trianSparseGroupLasso", (DL_FUNC) &_conquer2_trianSparseGroupLasso, 16},
+    {"_conquer2_trianSparseGroupLassoWarm", (DL_FUNC) &_conquer2_trianSparseGroupLassoWarm, 17},
+    {"_conquer2_trianScad", (DL_FUNC) &_conquer2_trianScad, 15},
+    {"_conquer2_trianScadWarm", (DL_FUNC) &_conquer2_trianScadWarm, 15},
+    {"_conquer2_trianMcp", (DL_FUNC) &_conquer2_trianMcp, 15},
+    {"_conquer2_trianMcpWarm", (DL_FUNC) &_conquer2_trianMcpWarm, 15},
+    {"_conquer2_conquerTrianLasso", (DL_FUNC) &_conquer2_conquerTrianLasso, 9},
+    {"_conquer2_conquerTrianLassoSeq", (DL_FUNC) &_conquer2_conquerTrianLassoSeq, 9},
+    {"_conquer2_conquerTrianElastic", (DL_FUNC) &_conquer2_conquerTrianElastic, 10},
+    {"_conquer2_conquerTrianElasticSeq", (DL_FUNC) &_conquer2_conquerTrianElasticSeq, 10},
+    {"_conquer2_conquerTrianGroupLasso", (DL_FUNC) &_conquer2_conquerTrianGroupLasso, 12},
+    {"_conquer2_conquerTrianGroupLassoSeq", (DL_FUNC) &_conquer2_conquerTrianGroupLassoSeq, 12},
+    {"_conquer2_conquerTrianSparseGroupLasso", (DL_FUNC) &_conquer2_conquerTrianSparseGroupLasso, 12},
+    {"_conquer2_conquerTrianSparseGroupLassoSeq", (DL_FUNC) &_conquer2_conquerTrianSparseGroupLassoSeq, 12},
+    {"_conquer2_conquerTrianScad", (DL_FUNC) &_conquer2_conquerTrianScad, 11},
+    {"_conquer2_conquerTrianScadSeq", (DL_FUNC) &_conquer2_conquerTrianScadSeq, 11},
+    {"_conquer2_conquerTrianMcp", (DL_FUNC) &_conquer2_conquerTrianMcp, 11},
+    {"_conquer2_conquerTrianMcpSeq", (DL_FUNC) &_conquer2_conquerTrianMcpSeq, 11},
+    {"_conquer2_cvTrianLassoWarm", (DL_FUNC) &_conquer2_cvTrianLassoWarm, 11},
+    {"_conquer2_cvTrianElasticWarm", (DL_FUNC) &_conquer2_cvTrianElasticWarm, 12},
+    {"_conquer2_cvTrianGroupLassoWarm", (DL_FUNC) &_conquer2_cvTrianGroupLassoWarm, 14},
+    {"_conquer2_cvTrianSparseGroupLassoWarm", (DL_FUNC) &_conquer2_cvTrianSparseGroupLassoWarm, 14},
+    {"_conquer2_cvTrianScadWarm", (DL_FUNC) &_conquer2_cvTrianScadWarm, 13},
+    {"_conquer2_cvTrianMcpWarm", (DL_FUNC) &_conquer2_cvTrianMcpWarm, 13},
+    {"_conquer2_lossUnifHd", (DL_FUNC) &_conquer2_lossUnifHd, 6},
+    {"_conquer2_updateUnifHd", (DL_FUNC) &_conquer2_updateUnifHd, 8},
+    {"_conquer2_lammUnifLasso", (DL_FUNC) &_conquer2_lammUnifLasso, 11},
+    {"_conquer2_lammUnifElastic", (DL_FUNC) &_conquer2_lammUnifElastic, 12},
+    {"_conquer2_lammUnifGroupLasso", (DL_FUNC) &_conquer2_lammUnifGroupLasso, 14},
+    {"_conquer2_lammUnifSparseGroupLasso", (DL_FUNC) &_conquer2_lammUnifSparseGroupLasso, 15},
+    {"_conquer2_unifLasso", (DL_FUNC) &_conquer2_unifLasso, 12},
+    {"_conquer2_unifLassoWarm", (DL_FUNC) &_conquer2_unifLassoWarm, 13},
+    {"_conquer2_unifElastic", (DL_FUNC) &_conquer2_unifElastic, 13},
+    {"_conquer2_unifElasticWarm", (DL_FUNC) &_conquer2_unifElasticWarm, 14},
+    {"_conquer2_unifGroupLasso", (DL_FUNC) &_conquer2_unifGroupLasso, 15},
+    {"_conquer2_unifGroupLassoWarm", (DL_FUNC) &_conquer2_unifGroupLassoWarm, 16},
+    {"_conquer2_unifSparseGroupLasso", (DL_FUNC) &_conquer2_unifSparseGroupLasso, 15},
+    {"_conquer2_unifSparseGroupLassoWarm", (DL_FUNC) &_conquer2_unifSparseGroupLassoWarm, 16},
+    {"_conquer2_unifScad", (DL_FUNC) &_conquer2_unifScad, 14},
+    {"_conquer2_unifScadWarm", (DL_FUNC) &_conquer2_unifScadWarm, 14},
+    {"_conquer2_unifMcp", (DL_FUNC) &_conquer2_unifMcp, 14},
+    {"_conquer2_unifMcpWarm", (DL_FUNC) &_conquer2_unifMcpWarm, 14},
+    {"_conquer2_conquerUnifLasso", (DL_FUNC) &_conquer2_conquerUnifLasso, 9},
+    {"_conquer2_conquerUnifLassoSeq", (DL_FUNC) &_conquer2_conquerUnifLassoSeq, 9},
+    {"_conquer2_conquerUnifElastic", (DL_FUNC) &_conquer2_conquerUnifElastic, 10},
+    {"_conquer2_conquerUnifElasticSeq", (DL_FUNC) &_conquer2_conquerUnifElasticSeq, 10},
+    {"_conquer2_conquerUnifGroupLasso", (DL_FUNC) &_conquer2_conquerUnifGroupLasso, 12},
+    {"_conquer2_conquerUnifGroupLassoSeq", (DL_FUNC) &_conquer2_conquerUnifGroupLassoSeq, 12},
+    {"_conquer2_conquerUnifSparseGroupLasso", (DL_FUNC) &_conquer2_conquerUnifSparseGroupLasso, 12},
+    {"_conquer2_conquerUnifSparseGroupLassoSeq", (DL_FUNC) &_conquer2_conquerUnifSparseGroupLassoSeq, 12},
+    {"_conquer2_conquerUnifScad", (DL_FUNC) &_conquer2_conquerUnifScad, 11},
+    {"_conquer2_conquerUnifScadSeq", (DL_FUNC) &_conquer2_conquerUnifScadSeq, 11},
+    {"_conquer2_conquerUnifMcp", (DL_FUNC) &_conquer2_conquerUnifMcp, 11},
+    {"_conquer2_conquerUnifMcpSeq", (DL_FUNC) &_conquer2_conquerUnifMcpSeq, 11},
+    {"_conquer2_cvUnifLassoWarm", (DL_FUNC) &_conquer2_cvUnifLassoWarm, 11},
+    {"_conquer2_cvUnifElasticWarm", (DL_FUNC) &_conquer2_cvUnifElasticWarm, 12},
+    {"_conquer2_cvUnifGroupLassoWarm", (DL_FUNC) &_conquer2_cvUnifGroupLassoWarm, 14},
+    {"_conquer2_cvUnifSparseGroupLassoWarm", (DL_FUNC) &_conquer2_cvUnifSparseGroupLassoWarm, 14},
+    {"_conquer2_cvUnifScadWarm", (DL_FUNC) &_conquer2_cvUnifScadWarm, 13},
+    {"_conquer2_cvUnifMcpWarm", (DL_FUNC) &_conquer2_cvUnifMcpWarm, 13},
+    {"_conquer2_updateHuber", (DL_FUNC) &_conquer2_updateHuber, 8},
+    {"_conquer2_updateGauss", (DL_FUNC) &_conquer2_updateGauss, 7},
+    {"_conquer2_updateLogistic", (DL_FUNC) &_conquer2_updateLogistic, 7},
+    {"_conquer2_updateUnif", (DL_FUNC) &_conquer2_updateUnif, 9},
+    {"_conquer2_updatePara", (DL_FUNC) &_conquer2_updatePara, 10},
+    {"_conquer2_updateTrian", (DL_FUNC) &_conquer2_updateTrian, 10},
+    {"_conquer2_huberReg", (DL_FUNC) &_conquer2_huberReg, 13},
+    {"_conquer2_smqrGauss", (DL_FUNC) &_conquer2_smqrGauss, 8},
+    {"_conquer2_smqrGaussNsd", (DL_FUNC) &_conquer2_smqrGaussNsd, 8},
+    {"_conquer2_smqrGaussIni", (DL_FUNC) &_conquer2_smqrGaussIni, 9},
+    {"_conquer2_smqrLogistic", (DL_FUNC) &_conquer2_smqrLogistic, 8},
+    {"_conquer2_smqrLogisticNsd", (DL_FUNC) &_conquer2_smqrLogisticNsd, 8},
+    {"_conquer2_smqrLogisticIni", (DL_FUNC) &_conquer2_smqrLogisticIni, 9},
+    {"_conquer2_smqrUnif", (DL_FUNC) &_conquer2_smqrUnif, 8},
+    {"_conquer2_smqrUnifNsd", (DL_FUNC) &_conquer2_smqrUnifNsd, 8},
+    {"_conquer2_smqrUnifIni", (DL_FUNC) &_conquer2_smqrUnifIni, 9},
+    {"_conquer2_smqrPara", (DL_FUNC) &_conquer2_smqrPara, 8},
+    {"_conquer2_smqrParaNsd", (DL_FUNC) &_conquer2_smqrParaNsd, 8},
+    {"_conquer2_smqrParaIni", (DL_FUNC) &_conquer2_smqrParaIni, 9},
+    {"_conquer2_smqrTrian", (DL_FUNC) &_conquer2_smqrTrian, 8},
+    {"_conquer2_smqrTrianNsd", (DL_FUNC) &_conquer2_smqrTrianNsd, 8},
+    {"_conquer2_smqrTrianIni", (DL_FUNC) &_conquer2_smqrTrianIni, 9},
+    {"_conquer2_smqrGaussProc", (DL_FUNC) &_conquer2_smqrGaussProc, 8},
+    {"_conquer2_smqrLogisticProc", (DL_FUNC) &_conquer2_smqrLogisticProc, 8},
+    {"_conquer2_smqrUnifProc", (DL_FUNC) &_conquer2_smqrUnifProc, 8},
+    {"_conquer2_smqrParaProc", (DL_FUNC) &_conquer2_smqrParaProc, 8},
+    {"_conquer2_smqrTrianProc", (DL_FUNC) &_conquer2_smqrTrianProc, 8},
+    {"_conquer2_smqrGaussInf", (DL_FUNC) &_conquer2_smqrGaussInf, 11},
+    {"_conquer2_smqrLogisticInf", (DL_FUNC) &_conquer2_smqrLogisticInf, 11},
+    {"_conquer2_smqrUnifInf", (DL_FUNC) &_conquer2_smqrUnifInf, 11},
+    {"_conquer2_smqrParaInf", (DL_FUNC) &_conquer2_smqrParaInf, 11},
+    {"_conquer2_smqrTrianInf", (DL_FUNC) &_conquer2_smqrTrianInf, 11},
+    {"_conquer2_huberRegUbd", (DL_FUNC) &_conquer2_huberRegUbd, 12},
+    {"_conquer2_smqrGaussUbd", (DL_FUNC) &_conquer2_smqrGaussUbd, 7},
+    {"_conquer2_smqrGaussNsdUbd", (DL_FUNC) &_conquer2_smqrGaussNsdUbd, 7},
+    {"_conquer2_smqrGaussIniUbd", (DL_FUNC) &_conquer2_smqrGaussIniUbd, 8},
+    {"_conquer2_smqrLogisticUbd", (DL_FUNC) &_conquer2_smqrLogisticUbd, 7},
+    {"_conquer2_smqrLogisticNsdUbd", (DL_FUNC) &_conquer2_smqrLogisticNsdUbd, 7},
+    {"_conquer2_smqrLogisticIniUbd", (DL_FUNC) &_conquer2_smqrLogisticIniUbd, 8},
+    {"_conquer2_smqrUnifUbd", (DL_FUNC) &_conquer2_smqrUnifUbd, 7},
+    {"_conquer2_smqrUnifNsdUbd", (DL_FUNC) &_conquer2_smqrUnifNsdUbd, 7},
+    {"_conquer2_smqrUnifIniUbd", (DL_FUNC) &_conquer2_smqrUnifIniUbd, 8},
+    {"_conquer2_smqrParaUbd", (DL_FUNC) &_conquer2_smqrParaUbd, 7},
+    {"_conquer2_smqrParaNsdUbd", (DL_FUNC) &_conquer2_smqrParaNsdUbd, 7},
+    {"_conquer2_smqrParaIniUbd", (DL_FUNC) &_conquer2_smqrParaIniUbd, 8},
+    {"_conquer2_smqrTrianUbd", (DL_FUNC) &_conquer2_smqrTrianUbd, 7},
+    {"_conquer2_smqrTrianNsdUbd", (DL_FUNC) &_conquer2_smqrTrianNsdUbd, 7},
+    {"_conquer2_smqrTrianIniUbd", (DL_FUNC) &_conquer2_smqrTrianIniUbd, 8},
+    {"_conquer2_smqrGaussProcUbd", (DL_FUNC) &_conquer2_smqrGaussProcUbd, 7},
+    {"_conquer2_smqrLogisticProcUbd", (DL_FUNC) &_conquer2_smqrLogisticProcUbd, 7},
+    {"_conquer2_smqrUnifProcUbd", (DL_FUNC) &_conquer2_smqrUnifProcUbd, 7},
+    {"_conquer2_smqrParaProcUbd", (DL_FUNC) &_conquer2_smqrParaProcUbd, 7},
+    {"_conquer2_smqrTrianProcUbd", (DL_FUNC) &_conquer2_smqrTrianProcUbd, 7},
+    {"_conquer2_smqrGaussInfUbd", (DL_FUNC) &_conquer2_smqrGaussInfUbd, 10},
+    {"_conquer2_smqrLogisticInfUbd", (DL_FUNC) &_conquer2_smqrLogisticInfUbd, 10},
+    {"_conquer2_smqrUnifInfUbd", (DL_FUNC) &_conquer2_smqrUnifInfUbd, 10},
+    {"_conquer2_smqrParaInfUbd", (DL_FUNC) &_conquer2_smqrParaInfUbd, 10},
+    {"_conquer2_smqrTrianInfUbd", (DL_FUNC) &_conquer2_smqrTrianInfUbd, 10},
+    {"_conquer2_asymptoticCI", (DL_FUNC) &_conquer2_asymptoticCI, 7},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_conquer2adaptive(DllInfo *dll) {
+RcppExport void R_init_conquer2(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
